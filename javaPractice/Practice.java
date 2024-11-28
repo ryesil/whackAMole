@@ -4,9 +4,11 @@ public class Practice {
 
     public static void main(String[] args) {
 
+        System.out.println(barkingDog1(true, 1));
+
     }
 
-// Question 1
+    // Question 1
 //        Barking Dog
 //        We have a dog that likes to bark.  We need to wake up if the dog is barking at night!
 //
@@ -30,6 +32,15 @@ public class Practice {
 //        shouldWakeUp (true, 8); → should return false, since it's not before 8.
 //
 //        shouldWakeUp (true, -1); → should return false since the hourOfDay parameter needs to be in a range 0-23.
+
+    public static boolean barkingDog1(boolean barking, int hrOfDay){
+
+        if((hrOfDay <= 23 && hrOfDay >= 0) && ((hrOfDay < 8 && barking) || (hrOfDay > 22 && barking))){
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
 
