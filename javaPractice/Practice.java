@@ -4,10 +4,10 @@ public class Practice {
 
     public static void main(String[] args) {
 
-        System.out.println(barkingDog1(true, 1));
+        //System.out.println(barkingDog1(true, 1));
 
-        boolean result = shouldWakeUp(true, 23.40 );
-        System.out.println(result);
+        //boolean result = shouldWakeUp(true, 23.40 );
+        //System.out.println(result);
 
 
 
@@ -59,6 +59,17 @@ public class Practice {
         }
 
     }
+    /* Q2 - Area Calculator
+    Write a method named area with one double parameter named radius.
+    The method needs to return a double value that represents the area of a circle. If the parameter radius is negative then return -1.0 to represent an invalid value. Write another overloaded method with 2 parameters x and y (both doubles), where x and y represent the sides of a rectangle.
+    The method needs to return an area of a rectangle. If either or both parameters is/are a negative return -1.0 to indicate an invalid value. For formulas and PI value please check the tips below.
+    Examples of input/output:
+    area(5.0); should return 78.53981633974483 or 78.53981
+    area(-1);  should return -1 since the parameter is negative
+    area(5.0, 4.0); should return 20.0 (5 * 4 = 20)
+    area(-1.0, 4.0);  should return -1 since first the parameter is negative
+
+    */
 
 
 
