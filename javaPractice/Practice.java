@@ -6,6 +6,11 @@ public class Practice {
 
         System.out.println(barkingDog1(true, 1));
 
+        boolean result = shouldWakeUp(true, 23.40 );
+        System.out.println(result);
+
+
+
     }
 
     // Question 1
@@ -40,6 +45,19 @@ public class Practice {
         } else {
             return false;
         }
+    }
+
+    public static Boolean shouldWakeUp(boolean isBark, double  hourOfDay){
+
+        if (hourOfDay<0.0 && hourOfDay>23.00){
+            return false;
+        }
+        if (isBark == true && (hourOfDay<8.00 && hourOfDay>22.00)){
+            return true;
+        }else {
+            return false;
+        }
+
     }
 
 
