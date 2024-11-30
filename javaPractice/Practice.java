@@ -139,5 +139,9 @@ public class Practice {
         }
     }
 
+public static void printEqual2(int a, int b, int c){
+       String printMessage = Stream.of(a,b,c).anyMatch(number -> number <0) ? "Invalid Value" : a == b && a == c ? "All numbers are equal" : a != b && a != c && b != c ? "All numbers are different" : "Neither all are equal or different";
+    System.out.println(printMessage);
+}
 
 }
