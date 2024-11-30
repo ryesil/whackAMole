@@ -9,8 +9,10 @@ public class Practice {
         //boolean result = shouldWakeUp(true, 23.40 );
         //System.out.println(result);
 
-        System.out.println(area(5.2));
-        System.out.println(area(2.4,4.7));
+        //System.out.println(area(5.2));
+        //System.out.println(area(2.4,4.7));
+
+        printEqual(1,3,2);
 
 
     }
@@ -103,6 +105,21 @@ public class Practice {
 //    printEqual(1, 1, 2); should print text Neither all are equal nor different
 //    printEqual(-1, -1, -1); should print text Invalid Value
 //    printEqual(1, 2, 3); should print text All numbers are different
+
+
+    public static void printEqual(int a, int b, int c){
+        if(a<0 || b<0 || c<0){
+            System.out.println("Invalid Value");
+            return;
+        }else if (a==b && a==c && b==c) {
+            System.out.println("All numbers are equal");
+
+        }else if (a!=b && a!=c && b!=c){
+            System.out.println("All numbers are different");
+        }else{
+            System.out.println("Neither all are equal or different");
+        }
+    }
 
 
 }
