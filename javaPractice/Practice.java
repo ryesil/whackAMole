@@ -139,5 +139,14 @@ public class Practice {
         }
     }
 
+    /* Question-4
+    Write a method that takes two integers as input and performs the following operations based on their values:
+    1- If both numbers are positive, print the sum of the two numbers.
+    2- If both numbers are negative, print the product of the two numbers.
+    3- If the numbers have different signs (one is positive and the other is negative),
+       print: "Cannot perform operations with numbers of different signs."
+    4- If either number is zero, print: "Zero is the absorbing element for multiplication."
+     */
+
 
 }
