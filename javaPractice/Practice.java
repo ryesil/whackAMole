@@ -1,5 +1,7 @@
 package javaPractice;
 
+import java.util.stream.Stream;
+
 public class Practice {
 
     public static void main(String[] args) {
@@ -66,8 +68,12 @@ public class Practice {
 
     /* Q2 - Area Calculator
     Write a method named area with one double parameter named radius.
-    The method needs to return a double value that represents the area of a circle. If the parameter radius is negative then return -1.0 to represent an invalid value. Write another overloaded method with 2 parameters x and y (both doubles), where x and y represent the sides of a rectangle.
-    The method needs to return an area of a rectangle. If either or both parameters is/are a negative return -1.0 to indicate an invalid value. For formulas and PI value please check the tips below.
+    The method needs to return a double value that represents the area of a circle.
+    If the parameter radius is negative then return -1.0 to represent an invalid value.
+    Write another overloaded method with 2 parameters x and y (both doubles), where x and y represent the sides of a rectangle.
+    The method needs to return an area of a rectangle.
+    If either or both parameters is/are a negative return -1.0 to indicate an invalid value.
+    For formulas and PI value please check the tips below.
     Examples of input/output:
     area(5.0); should return 78.53981633974483 or 78.53981
     area(-1);  should return -1 since the parameter is negative
@@ -92,6 +98,18 @@ public class Practice {
         }
     }
 
+//RY
+  public double area2(double radius){
+        return radius < 0 ? -1 : Math.pow(radius, 2);
+  }
+
+  public double area2(double x, double y){
+        if(x < 0 || y < 0){
+            return -1.0;
+        } else {
+            return x*y;
+        }
+  }
 //    Question 3
 //    Equality Printer
 //    Write a method printEqual with 3 parameters of type int. The method should not return anything (void).
