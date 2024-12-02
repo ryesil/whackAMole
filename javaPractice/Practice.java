@@ -139,6 +139,12 @@ public class Practice {
         }
     }
 
+
+public static void printEqual2(int a, int b, int c){
+       String printMessage = Stream.of(a,b,c).anyMatch(number -> number <0) ? "Invalid Value" : a == b && a == c ? "All numbers are equal" : a != b && a != c && b != c ? "All numbers are different" : "Neither all are equal or different";
+    System.out.println(printMessage);
+}
+
     /* Question-4
     Write a method that takes two integers as input and performs the following operations based on their values:
     1- If both numbers are positive, print the sum of the two numbers.
@@ -147,6 +153,7 @@ public class Practice {
        print: "Cannot perform operations with numbers of different signs."
     4- If either number is zero, print: "Zero is the absorbing element for multiplication."
      */
+
 
 
 }
