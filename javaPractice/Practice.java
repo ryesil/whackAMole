@@ -14,8 +14,7 @@ public class Practice {
         //System.out.println(area(5.2));
         //System.out.println(area(2.4,4.7));
 
-        //printEqual(1, 3, 2);
-        checkNumbers(-3,5);
+        printEqual(1,3,2);
 
 
     }
@@ -94,23 +93,23 @@ public class Practice {
     public static double area(double x, double y) {
         if (x < 0 || y < 0) {
             return -1.0;
-        } else {
-            return x * y;
+        }else{
+            return x*y;
         }
     }
 
-    //RY
-    public double area2(double radius) {
+//RY
+  public double area2(double radius){
         return radius < 0 ? -1 : Math.pow(radius, 2);
-    }
+  }
 
-    public double area2(double x, double y) {
-        if (x < 0 || y < 0) {
+  public double area2(double x, double y){
+        if(x < 0 || y < 0){
             return -1.0;
         } else {
-            return x * y;
+            return x*y;
         }
-    }
+  }
 //    Question 3
 //    Equality Printer
 //    Write a method printEqual with 3 parameters of type int. The method should not return anything (void).
@@ -126,25 +125,25 @@ public class Practice {
 //    printEqual(1, 2, 3); should print text All numbers are different
 
 
-    public static void printEqual(int a, int b, int c) {
-        if (a < 0 || b < 0 || c < 0) {
+    public static void printEqual(int a, int b, int c){
+        if(a<0 || b<0 || c<0){
             System.out.println("Invalid Value");
             return;
-        } else if (a == b && a == c) {
+        }else if (a==b && a==c && b==c) {
             System.out.println("All numbers are equal");
 
-        } else if (a != b && a != c && b != c) {
+        }else if (a!=b && a!=c && b!=c){
             System.out.println("All numbers are different");
-        } else {
+        }else{
             System.out.println("Neither all are equal or different");
         }
     }
 
 
-    public static void printEqual2(int a, int b, int c) {
-        String printMessage = Stream.of(a, b, c).anyMatch(number -> number < 0) ? "Invalid Value" : a == b && a == c ? "All numbers are equal" : a != b && a != c && b != c ? "All numbers are different" : "Neither all are equal or different";
-        System.out.println(printMessage);
-    }
+public static void printEqual2(int a, int b, int c){
+       String printMessage = Stream.of(a,b,c).anyMatch(number -> number <0) ? "Invalid Value" : a == b && a == c ? "All numbers are equal" : a != b && a != c && b != c ? "All numbers are different" : "Neither all are equal or different";
+    System.out.println(printMessage);
+}
 
     /* Question-4
     Write a method that takes two integers as input and performs the following operations based on their values:
@@ -155,14 +154,6 @@ public class Practice {
     4- If either number is zero, print: "Zero is the absorbing element for multiplication."
      */
 
-    public static void checkNumbers(int a, int b) {
-        String result = (a>0 && b>0) ? "Sum : " + (a+b)
-                :(a<0 && b<0)? "Multiplication : "+(a*b)
-                    :(a <0 || b<0)? "Cannot perform operations with numbers of different signs."
-                        : "Zero is the absorbing element for multiplication.";
-
-        System.out.println(result);
-    }
 
 
 }
