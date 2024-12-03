@@ -77,6 +77,17 @@ public class PracticeQuestions {
 //    isPalindrome(-1221); → should return true
 //    isPalindrome(707); → should return true
 //    isPalindrome(11212); → should return false because reverse is 21211 and that is not equal to 11212.
-//    Tip: What is a Palindrome number?  A palindrome number is a number which when reversed is equal to the original number. For example: 121, 12321, 1001 etc.
+//    Tip: What is a Palindrome number?  A palindrome number is a number which when reversed is equal to the original number.
+//    For example: 121, 12321, 1001 etc.
+
+    /*Question 6
+    Write a method in Java that generates the following pattern based on the number of rows provided as a parameter.
+    The numbers should start from 1 and increment sequentially.
+    For example, for 4 rows:
+    1
+    2 3
+    4 5 6
+    7 8 9 10
+    */
 
 }

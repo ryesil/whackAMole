@@ -92,20 +92,21 @@ public class PracticeAnswers {
         } else if (a * b < 0) {
             result = "Cannot perform operations with numbers of different signs.";
         } else if (a * b == 0) {
-            result = "Zero is the absorbing element for multiplication."
+            result = "Zero is the absorbing element for multiplication.";
         }
         return result;
     }
+    public static void calculate(int a, int b){
+        String result = (a > 0 && b > 0)
+                ? "Sum: " + (a + b)
+                : (a < 0 && b < 0)
+                    ? "Multiplication: " + (a * b)
+                    : (a < 0 || b < 0)
+                        ? "Cannot perform operations with numbers of different signs."
+                        : "Zero is the absorbing element for multiplication.";
 
-
-
-
-
-
-
-
-
-
+        System.out.println(result);
+    }
 
     //Q5
     public static boolean isPalindrome1(int number){
@@ -123,5 +124,19 @@ public class PracticeAnswers {
         System.out.println(reversedNumberArr);
         return numberArr.equals(reversedNumberArr);
     }
+
+    public static boolean checkPallindrome(int num){
+        if (num<0) return false;
+
+        String[] arr = String.valueOf(num).split("");
+        StringBuilder reversed = new StringBuilder();
+        for (int i = arr.length-1; i >= 0 ; i--) {
+            reversed.append(arr[i]);
+        }
+        System.out.println(reversed);
+        System.out.println(reversed.toString().equals(String.valueOf(num)));
+        return reversed.toString().equals(String.valueOf(num));
+    }
+
 
 }
