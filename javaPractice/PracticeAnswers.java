@@ -107,4 +107,21 @@ public class PracticeAnswers {
 
 
 
+    //Q5
+    public static boolean isPalindrome1(int number){
+        String numberStr = String.valueOf(number);
+        return new StringBuilder(numberStr).equals(new StringBuilder(numberStr).reverse());
+    }
+
+    public static boolean isPalindrome2(int number){
+        List<Integer> numberArr = Arrays.stream(String.valueOf(number).split("")).map((digit)-> Integer.parseInt(digit)).collect(Collectors.toList());
+        List<Integer> reversedNumberArr = new ArrayList<>();
+        for(int i = numberArr.size()-1 ; i >=0 ; i--){
+            reversedNumberArr.add(numberArr.get(i));
+        }
+        System.out.println(numberArr);
+        System.out.println(reversedNumberArr);
+        return numberArr.equals(reversedNumberArr);
+    }
+
 }
