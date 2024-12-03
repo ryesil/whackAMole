@@ -18,6 +18,10 @@ public class PracticeMain {
 //        System.out.println(area(2.4,4.7));
 //        printEqual(1,3,2);
 
+//        PracticeAnswers.isPalindrome2(1232323);
+
+
+
     }
 
 }
