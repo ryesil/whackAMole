@@ -83,6 +83,19 @@ public class PracticeAnswers {
     }
 
     //Q4
+    public static String calculator(int a, int b) {
+        String result = "";
+        if (a > 0 && b > 0) {
+            result = String.valueOf(a + b);
+        } else if (a < 0 && b < 0) {
+            result = String.valueOf(a * b);
+        } else if (a * b < 0) {
+            result = "Cannot perform operations with numbers of different signs.";
+        } else if (a * b == 0) {
+            result = "Zero is the absorbing element for multiplication."
+        }
+        return result;
+    }
 
 
 

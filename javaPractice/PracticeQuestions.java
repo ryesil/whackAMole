@@ -78,18 +78,5 @@ public class PracticeQuestions {
 //    isPalindrome(707); → should return true
 //    isPalindrome(11212); → should return false because reverse is 21211 and that is not equal to 11212.
 //    Tip: What is a Palindrome number?  A palindrome number is a number which when reversed is equal to the original number. For example: 121, 12321, 1001 etc.
-    public static String calculator(int a, int b) {
-        String result = "";
-        if (a > 0 && b > 0) {
-            result = String.valueOf(a + b);
-        } else if (a < 0 && b < 0) {
-            result = String.valueOf(a * b);
-        } else if (a * b < 0) {
-            result = "Cannot perform operations with numbers of different signs.";
-        } else if (a * b == 0) {
-            result = "Zero is the absorbing element for multiplication."
-        }
-        return result;
-    }
 
 }
