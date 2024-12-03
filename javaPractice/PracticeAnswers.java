@@ -93,7 +93,7 @@ public class PracticeAnswers {
 
 
 
-    //Q5
+
     //Q5
     public static boolean isPalindrome1(int number){
         String numberStr = String.valueOf(number);
