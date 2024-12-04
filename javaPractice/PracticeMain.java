@@ -19,8 +19,8 @@ public class PracticeMain {
 //        printEqual(1,3,2);
 //        PracticeAnswers.calculate(0,5);
 //        PracticeAnswers.isPalindrome2(1232323);
-        PracticeAnswers.checkPallindrome(15541);
-
+//        PracticeAnswers.checkPallindrome(15541);
+          PracticeAnswers.triangleMaker(6);
 
 
     }

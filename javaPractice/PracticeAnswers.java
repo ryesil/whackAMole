@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class PracticeAnswers {
@@ -138,5 +139,17 @@ public class PracticeAnswers {
         return reversed.toString().equals(String.valueOf(num));
     }
 
+//Q6
+public static void triangleMaker(int rowNum) {
+        int increment = 0;
+        for(int i = 1 ; i <= rowNum ; i++){
+            StringBuilder stringBuilder = new StringBuilder();
+            int finalIncrement = increment;
+            IntStream.range(1,i+1).forEach(num -> stringBuilder.append((num+finalIncrement)).append(" "));
+            System.out.println(stringBuilder);
+            String[] arr =stringBuilder.toString().split(" ");
+            increment = Integer.parseInt(arr[arr.length-1]);
+        }
+}
 
 }
