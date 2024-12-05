@@ -1,8 +1,6 @@
 package javaPractice;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -219,5 +217,18 @@ public class PracticeAnswers {
     }
 
     //Q9
-
+    public static boolean hasSharedDigit(int num1, int num2){
+        if(num1 > 99 || num2 > 99 || num1 < 10 || num2 < 10){
+            return false;
+        } else {
+           String num2Str = String.valueOf(num2);
+           {
+             int remainder = num1 % 10;
+            if(num2Str.contains(""+remainder)){
+                return true;
+            }
+           }while(num1 > 10);
+        }
+        return false;
+    }
 }
