@@ -216,6 +216,7 @@ public class PracticeAnswers {
         return Arrays.stream(String.valueOf(number).split("")).mapToInt(numStr -> Integer.parseInt(numStr)).filter(x->x%2 == 0).sum();
     }
 
+
     //Q9
     public static boolean hasSharedDigit(int num1, int num2){
         if(num1 > 99 || num2 > 99 || num1 < 10 || num2 < 10){
@@ -230,5 +231,15 @@ public class PracticeAnswers {
            }while(num1 > 10);
         }
         return false;
+    }
+
+
+    //Q10
+    public static boolean hasSameLastDigit(int num1, int num2, int num3){
+        if(Stream.of(num1, num2, num3).anyMatch(num -> num < 10 || num > 1000)){
+            return false;
+        } else {
+         return Stream.of(num1, num2, num3).map(num -> num%10).collect(Collectors.toSet()).size() != 3;
+        }
     }
 }

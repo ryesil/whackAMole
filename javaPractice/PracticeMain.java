@@ -26,7 +26,8 @@ public class PracticeMain {
 //        System.out.println(PracticeAnswers.sumFirstAndLastDigit(252));
 //        PracticeAnswers.sumFirstAndLastDigit2(-18);
 //        System.out.println(PracticeAnswers.getEvenSum1(800));
-        System.out.println(PracticeAnswers.hasSharedDigit(12,82));;
+//        System.out.println(PracticeAnswers.hasSharedDigit(12,82));
+//        System.out.println(PracticeAnswers.hasSameLastDigit(12, 23, 53));
     }
 
 }
