@@ -102,5 +102,135 @@ public class PracticeQuestions {
 //    sumFirstAndLastDigit(5); → should return 10, the first digit and the last digit is 5 since we only have 1 digit, which gives us 5+5 and the sum is 10.
 //    sumFirstAndLastDigit(-10); → should return -1, since the parameter is negative and needs to be positive.
 
+    //Question 8
+//    Even Digit Sum
+//    Write a method named getEvenDigitSum with one parameter of type int called number.
+//    The method should return the sum of the even digits within the number.
+//    If the number is negative, the method should return -1 to indicate an invalid value.
+//    EXAMPLE INPUT/OUTPUT:
+//    getEvenDigitSum(123456789); → should return 20 since 2 + 4 + 6 + 8 = 20
+//    getEvenDigitSum(252); → should return 4 since 2 + 2 = 4
+//    getEvenDigitSum(-22); → should return -1 since the number is negative
+
+
+    //Question 9
+//    Shared Digit
+//    Write a method named hasSharedDigit with two parameters of type int.
+//    Each number should be within the range of 10 (inclusive) - 99 (inclusive). If one of the numbers is not within the range, the method should return false.
+//    The method should return true if there is a digit that appears in both numbers, such as 2 in 12 and 23; otherwise, the method should return false.
+//    EXAMPLE INPUT/OUTPUT:
+//    hasSharedDigit(12, 23); → should return true since the digit 2 appears in both numbers
+//    hasSharedDigit(9, 99); → should return false since 9 is not within the range of 10-99
+//    hasSharedDigit(15, 55); → should return true since the digit 5 appears in both numbers
+
+   //Question 10
+//   Last Digit Checker
+//    Write a method named hasSameLastDigit with three parameters of type int.
+//    Each number should be within the range of 10 (inclusive) - 1000 (inclusive). If one of the numbers is not within the range, the method should return false.
+//    The method should return true if at least two of the numbers share the same rightmost digit; otherwise, it should return false.
+//    EXAMPLE INPUT/OUTPUT:
+//    hasSameLastDigit (41, 22, 71); → should return true since 1 is the rightmost digit in numbers 41 and 71
+//    hasSameLastDigit (23, 32, 42); → should return true since 2 is the rightmost digit in numbers 32 and 42
+//    hasSameLastDigit (9, 99, 999); → should return false since 9 is not within the range of 10-1000
+
+//    Write another method named isValid with one parameter of type int.
+//    The method needs to return true if the number parameter is in range of 10(inclusive) - 1000(inclusive), otherwise return false.
+//    EXAMPLE INPUT/OUTPUT
+//    isValid(10); → should return true since 10 is within the range of 10-1000
+//    isValid(468); → should return true since 468 is within the range of 10-1000
+//    isValid(1051); → should return false since 1051 is not within the range of 10-1000
+
+  //Q11
+//  All Factors
+//    Write a method named printFactors with one parameter of type int named number.
+//    If number is < 1, the method should print "Invalid Value".
+//    The method should print all factors of the number. A factor of a number is an integer which divides that number wholly (i.e. without leaving a remainder).
+//    For example, 3 is a factor of 6 because 3 fully divides 6 without leaving a remainder. In other words 6 / 3 = 2.
+
+//    EXAMPLE INPUT/OUTPUT:
+//    printFactors(6); → should print 1 2 3 6
+//    printFactors(32); → should print 1 2 4 8 16 32
+//    printFactors(10); → should print 1 2 5 10
+//    printFactors(-1); → should print "Invalid Value" since number is < 1
+
+   //Q12
+//   Diagonal Star
+//    Write a method named printSquareStar with one parameter of type int named number.
+//    If number is < 5, the method should print "Invalid Value".
+//    The method should print diagonals to generate a rectangular pattern composed of stars (*). This should be accomplished by using loops (see examples below).
+
+//    EXAMPLE INPUT/OUTPUT:
+//    EXAMPLE 1
+//    printSquareStar(5); should print the following:
+//            → NOTE: For text in Code Blocks below, use code icon {...}  on Udemy
+//        *****
+//        ** **
+//        * * *
+//        ** **
+//        *****
+
+//    Explanation:
+//
+//*****   5 stars
+//** **   2 stars space 2 stars
+//* * *   1 star space 1 star space 1 star
+//** **   2 stars space 2 stars
+//*****   5 stars
+//
+//
+//    EXAMPLE 2
+//    printSquareStar(8); should print the following:
+//            ********
+//            **    **
+//            * *  * *
+//            *  **  *
+//            *  **  *
+//            * *  * *
+//            **    **
+//            ********
+//    The patterns above consist of a number of rows and columns (where number is the number of rows to print). For each row or column, stars are printed based on four conditions (Read them carefully):
+//    In the first or last row
+//    In the first or last column
+//    When the row number equals the column number
+//    When the column number equals rowCount - currentRow + 1 (where currentRow is current row number)
+
+    //Q13
+//    Flour Pack Problem
+//    Write a method named canPack with three parameters of type int named bigCount, smallCount, and goal.
+//    The parameter bigCount represents the count of big flour bags (5 kilos each).
+//    The parameter smallCount represents the count of small flour bags (1 kilo each).
+//    The parameter goal represents the goal amount of kilos of flour needed to assemble a package.
+//    Therefore, the sum of the kilos of bigCount and smallCount must be at least equal to the value of goal. The method should return true if it is possible to make a package with goal kilos of flour.
+//    If the sum is greater than goal, ensure that only full bags are used towards the goal amount. For example, if goal = 9, bigCount = 2, and smallCount = 0, the method should return false since each big bag is 5 kilos and cannot be divided. However, if goal = 9, bigCount = 1, and smallCount = 5, the method should return true because of 1 full bigCount bag and 4 full smallCount bags equal goal, and it's okay if there are additional bags left over.
+//    If any of the parameters are negative, return false.
+
+//    EXAMPLE INPUT/OUTPUT:
+//    canPack (1, 0, 4); should return false since bigCount is 1 (big bag of 5 kilos) and goal is 4 kilos.
+//            canPack (1, 0, 5); should return true since bigCount is 1 (big bag of 5 kilos) and goal is 5 kilos.
+//            canPack (0, 5, 4); should return true since smallCount is 5 (small bags of 1 kilo) and goal is 4 kilos, and we have 1 bag left which is ok as mentioned above.
+//    canPack (2, 2, 11); should return true since bigCount is 2 (big bags 5 kilos each) and smallCount is 2 (small bags of 1 kilo), makes in total 12 kilos and goal is 11 kilos.
+//            canPack (-3, 2, 12); should return false since bigCount is negative.
+
+    //Q14
+//    Number To Words
+//    Write a method called numberToWords with one int parameter named number.
+//    The method should print out the passed number using words for the digits.
+//    If the number is negative, print "Invalid Value".
+//    EXAMPLE INPUT/OUTPUT:
+//    numberToWords(123); should print "One Two Three".
+//    numberToWords(1010); should print "One Zero One Zero".
+//    numberToWords(1000); should print "One Zero Zero Zero".
+//    numberToWords(-12); should print "Invalid Value" since the parameter is negative.
+
+    //Q15
+//    Shared Digit
+//    Write a method named hasSharedDigit with two parameters of type int.
+//    Each number should be within the range of 10 (inclusive) - 99 (inclusive). If one of the numbers is not within the range, the method should return false.
+//    The method should return true if there is a digit that appears in both numbers, such as 2 in 12 and 23; otherwise, the method should return false.
+//    EXAMPLE INPUT/OUTPUT:
+//    hasSharedDigit(12, 23); → should return true since the digit 2 appears in both numbers
+//    hasSharedDigit(9, 99); → should return false since 9 is not within the range of 10-99
+//    hasSharedDigit(15, 55); → should return true since the digit 5 appears in both numbers
+
 
 }

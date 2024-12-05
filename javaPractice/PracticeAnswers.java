@@ -45,41 +45,41 @@ public class PracticeAnswers {
     public static double area(double x, double y) {
         if (x < 0 || y < 0) {
             return -1.0;
-        }else{
-            return x*y;
+        } else {
+            return x * y;
         }
     }
 
-    public double area2(double radius){
+    public double area2(double radius) {
         return radius < 0 ? -1 : Math.pow(radius, 2);
     }
 
-    public double area2(double x, double y){
-        if(x < 0 || y < 0){
+    public double area2(double x, double y) {
+        if (x < 0 || y < 0) {
             return -1.0;
         } else {
-            return x*y;
+            return x * y;
         }
     }
 
     //Q3
-    public static void printEqual(int a, int b, int c){
-        if(a<0 || b<0 || c<0){
+    public static void printEqual(int a, int b, int c) {
+        if (a < 0 || b < 0 || c < 0) {
             System.out.println("Invalid Value");
             return;
-        }else if (a==b && a==c && b==c) {
+        } else if (a == b && a == c && b == c) {
             System.out.println("All numbers are equal");
 
-        }else if (a!=b && a!=c && b!=c){
+        } else if (a != b && a != c && b != c) {
             System.out.println("All numbers are different");
-        }else{
+        } else {
             System.out.println("Neither all are equal or different");
         }
     }
 
 
-    public static void printEqual2(int a, int b, int c){
-        String printMessage = Stream.of(a,b,c).anyMatch(number -> number <0) ? "Invalid Value" : a == b && a == c ? "All numbers are equal" : a != b && a != c && b != c ? "All numbers are different" : "Neither all are equal or different";
+    public static void printEqual2(int a, int b, int c) {
+        String printMessage = Stream.of(a, b, c).anyMatch(number -> number < 0) ? "Invalid Value" : a == b && a == c ? "All numbers are equal" : a != b && a != c && b != c ? "All numbers are different" : "Neither all are equal or different";
         System.out.println(printMessage);
     }
 
@@ -97,28 +97,29 @@ public class PracticeAnswers {
         }
         return result;
     }
-    public static void calculate(int a, int b){
+
+    public static void calculate(int a, int b) {
         String result = (a > 0 && b > 0)
                 ? "Sum: " + (a + b)
                 : (a < 0 && b < 0)
-                    ? "Multiplication: " + (a * b)
-                    : (a < 0 || b < 0)
-                        ? "Cannot perform operations with numbers of different signs."
-                        : "Zero is the absorbing element for multiplication.";
+                ? "Multiplication: " + (a * b)
+                : (a < 0 || b < 0)
+                ? "Cannot perform operations with numbers of different signs."
+                : "Zero is the absorbing element for multiplication.";
 
         System.out.println(result);
     }
 
     //Q5
-    public static boolean isPalindrome1(int number){
+    public static boolean isPalindrome1(int number) {
         String numberStr = String.valueOf(number);
         return new StringBuilder(numberStr).equals(new StringBuilder(numberStr).reverse());
     }
 
-    public static boolean isPalindrome2(int number){
-        List<Integer> numberArr = Arrays.stream(String.valueOf(number).split("")).map((digit)-> Integer.parseInt(digit)).collect(Collectors.toList());
+    public static boolean isPalindrome2(int number) {
+        List<Integer> numberArr = Arrays.stream(String.valueOf(number).split("")).map((digit) -> Integer.parseInt(digit)).collect(Collectors.toList());
         List<Integer> reversedNumberArr = new ArrayList<>();
-        for(int i = numberArr.size()-1 ; i >=0 ; i--){
+        for (int i = numberArr.size() - 1; i >= 0; i--) {
             reversedNumberArr.add(numberArr.get(i));
         }
         System.out.println(numberArr);
@@ -126,20 +127,21 @@ public class PracticeAnswers {
         return numberArr.equals(reversedNumberArr);
     }
 
-    public static boolean checkPallindrome(int num){
-        if (num<0) return false;
+    public static boolean checkPallindrome(int num) {
+        if (num < 0) return false;
 
         String[] arr = String.valueOf(num).split("");
         StringBuilder reversed = new StringBuilder();
-        for (int i = arr.length-1; i >= 0 ; i--) {
+        for (int i = arr.length - 1; i >= 0; i--) {
             reversed.append(arr[i]);
         }
         System.out.println(reversed);
         System.out.println(reversed.toString().equals(String.valueOf(num)));
         return reversed.toString().equals(String.valueOf(num));
     }
+
     //Q6
-    public static void createTriange(int num){
+    public static void createTriange(int num) {
         int numerator = 1;
         for (int i = 0; i <= num; i++) {
             for (int j = 0; j <= i; j++) {
@@ -150,21 +152,51 @@ public class PracticeAnswers {
         }
     }
 
-//Q6
-public static void triangleMaker(int rowNum) {
+    //Q6
+    public static void triangleMaker(int rowNum) {
         int increment = 0;
-        for(int i = 1 ; i <= rowNum ; i++){
+        for (int i = 1; i <= rowNum; i++) {
             StringBuilder stringBuilder = new StringBuilder();
             int finalIncrement = increment;
-            IntStream.range(1,i+1).forEach(num -> stringBuilder.append((num+finalIncrement)).append(" "));
+            IntStream.range(1, i + 1).forEach(num -> stringBuilder.append((num + finalIncrement)).append(" "));
             System.out.println(stringBuilder);
-            String[] arr =stringBuilder.toString().split(" ");
-            increment = Integer.parseInt(arr[arr.length-1]);
+            String[] arr = stringBuilder.toString().split(" ");
+            increment = Integer.parseInt(arr[arr.length - 1]);
         }
-}
+    }
+
+    //Q7
+    public static int sumFirstAndLastDigit(int num) {
+        if (num < 0) {
+            return -1;
+        }
+        int lastDigit = num % 10;
+
+        int firstDigit = num;
+        while (firstDigit >= 10) {
+            firstDigit /= 10;
+        }
+
+        return firstDigit + lastDigit;
+    }
+
+    public static void sumFirstAndLastDigit2(int num){
+        if (num<0){
+            System.out.println(-1);
+            return;
+        }else{
+            String arr[] = String.valueOf(num).trim().split("");
+            int a = Integer.parseInt(arr[0]);
+            int b = Integer.parseInt(arr[arr.length - 1]);
+            int sum = a + b;
+            System.out.println(sum);
+        }
+    }
+
+
 
 //Q7
-    public static int sumFirstAndLastDigit( int num){
+    public static int sumFirstAndLastDigit1( int num){
         int sum = 0;
         if(num < 0){
             return -1;
