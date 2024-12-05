@@ -21,6 +21,7 @@ public class PracticeMain {
 //        PracticeAnswers.isPalindrome2(1232323);
 //        PracticeAnswers.checkPallindrome(15541);
           PracticeAnswers.triangleMaker(6);
+          PracticeAnswers.createTriange(5);
 
 
     }

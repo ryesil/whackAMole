@@ -138,6 +138,17 @@ public class PracticeAnswers {
         System.out.println(reversed.toString().equals(String.valueOf(num)));
         return reversed.toString().equals(String.valueOf(num));
     }
+    //Q6
+    public static void createTriange(int num){
+        int numerator = 1;
+        for (int i = 0; i <= num; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(numerator + " ");
+                numerator++;
+            }
+            System.out.println();
+        }
+    }
 
 //Q6
 public static void triangleMaker(int rowNum) {
