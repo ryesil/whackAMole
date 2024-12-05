@@ -20,11 +20,8 @@ public class PracticeMain {
 //        PracticeAnswers.calculate(0,5);
 //        PracticeAnswers.isPalindrome2(1232323);
 //        PracticeAnswers.checkPallindrome(15541);
-
-        PracticeAnswers.createTriange(5);
-
-
-
+          PracticeAnswers.triangleMaker(6);
+          PracticeAnswers.createTriange(5);
 
 
     }
