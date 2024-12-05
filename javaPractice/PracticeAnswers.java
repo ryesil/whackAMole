@@ -1,8 +1,6 @@
 package javaPractice;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -193,9 +191,6 @@ public class PracticeAnswers {
         }
     }
 
-
-
-//Q7
     public static int sumFirstAndLastDigit1( int num){
         int sum = 0;
         if(num < 0){
@@ -212,4 +207,39 @@ public class PracticeAnswers {
         return sum;
     }
 
+    //Q8
+    public static int getEvenSum1(int number){
+        return Arrays.stream(String.valueOf(number).split("")).map(numStr -> Integer.parseInt(numStr)).filter(x-> x%2 == 0).reduce(0, (a,b)->a+b);
+    }
+
+    public static int getEvenSum2(int number){
+        return Arrays.stream(String.valueOf(number).split("")).mapToInt(numStr -> Integer.parseInt(numStr)).filter(x->x%2 == 0).sum();
+    }
+
+
+    //Q9
+    public static boolean hasSharedDigit(int num1, int num2){
+        if(num1 > 99 || num2 > 99 || num1 < 10 || num2 < 10){
+            return false;
+        } else {
+           String num2Str = String.valueOf(num2);
+           {
+             int remainder = num1 % 10;
+            if(num2Str.contains(""+remainder)){
+                return true;
+            }
+           }while(num1 > 10);
+        }
+        return false;
+    }
+
+
+    //Q10
+    public static boolean hasSameLastDigit(int num1, int num2, int num3){
+        if(Stream.of(num1, num2, num3).anyMatch(num -> num < 10 || num > 1000)){
+            return false;
+        } else {
+         return Stream.of(num1, num2, num3).map(num -> num%10).collect(Collectors.toSet()).size() != 3;
+        }
+    }
 }
