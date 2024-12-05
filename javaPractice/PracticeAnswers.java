@@ -163,4 +163,21 @@ public static void triangleMaker(int rowNum) {
         }
 }
 
+//Q7
+    public static int sumFirstAndLastDigit( int num){
+        int sum = 0;
+        if(num < 0){
+            return -1;
+        } else if ( num < 10 ) {
+            return num;
+        } else  {
+
+                String[] numString = String.valueOf(num).split("");
+                for( int i = 0 ; i < numString.length; i += numString.length-1){
+                    sum += Integer.parseInt(numString[i]);
+                }
+            }
+        return sum;
+    }
+
 }
