@@ -193,9 +193,6 @@ public class PracticeAnswers {
         }
     }
 
-
-
-//Q7
     public static int sumFirstAndLastDigit1( int num){
         int sum = 0;
         if(num < 0){
@@ -211,5 +208,16 @@ public class PracticeAnswers {
             }
         return sum;
     }
+
+    //Q8
+    public static int getEvenSum1(int number){
+        return Arrays.stream(String.valueOf(number).split("")).map(numStr -> Integer.parseInt(numStr)).filter(x-> x%2 == 0).reduce(0, (a,b)->a+b);
+    }
+
+    public static int getEvenSum2(int number){
+        return Arrays.stream(String.valueOf(number).split("")).mapToInt(numStr -> Integer.parseInt(numStr)).filter(x->x%2 == 0).sum();
+    }
+
+    //Q9
 
 }
