@@ -213,7 +213,9 @@ public class PracticeAnswers {
 
     //Q8
     public static int findEvenDigitSum(int num) {
-        if (num < 0) return -1;
+        if (num < 0){
+            return -1;
+        }
         int sum = 0;
         while (num > 0) {
             int lastDigit = num % 10;
