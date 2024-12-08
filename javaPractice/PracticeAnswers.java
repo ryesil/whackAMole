@@ -242,4 +242,22 @@ public class PracticeAnswers {
          return Stream.of(num1, num2, num3).map(num -> num%10).collect(Collectors.toSet()).size() != 3;
         }
     }
+
+    //Q11
+    public static void printFactors(int num){
+        StringBuilder sb = new StringBuilder();
+        if(num < 1){
+            sb.append("Invalid Value");
+        } else {
+            int i = 2;
+            {
+                if(num % i == 0){
+                    sb.append(i+", ");
+                }
+                System.out.println(i);
+                i++;
+            }while(i <= (num/2));
+        }
+        System.out.println(sb);
+    }
 }
