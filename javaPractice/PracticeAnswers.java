@@ -213,7 +213,7 @@ public class PracticeAnswers {
 
     //Q8
     public static int findEvenDigitSum(int num) {
-        if (num < 0){
+        if (num < 0) {
             return -1;
         }
         int sum = 0;
@@ -222,9 +222,31 @@ public class PracticeAnswers {
             if (lastDigit % 2 == 0) {
                 sum += lastDigit;
             }
-            num/=10;
+            num /= 10;
         }
         return sum;
+    }
+
+    //Q9
+    public static boolean hasSharedDigit(int num1, int num2) {
+        if (num1 < 10 || num1 > 99 || num2 < 10 || num2 > 99) {
+            return false;
+        }
+
+        int firstDigitOfNum1 = num1 / 10;
+        int lastDigitOfNum1 = num1 % 10;
+
+        int firstDigitOfNum2 = num2 / 10;
+        int lastDigitOfNum2 = num2 % 10;
+
+        return (firstDigitOfNum1 == firstDigitOfNum2 ||
+                firstDigitOfNum1 == lastDigitOfNum2 ||
+                lastDigitOfNum1 == firstDigitOfNum2 ||
+                lastDigitOfNum1 == lastDigitOfNum2);
+
+
+
+
     }
 
 }
