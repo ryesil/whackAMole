@@ -29,7 +29,6 @@ public class PracticeMain {
 //        System.out.println(PracticeAnswers.hasSharedDigit2(32,562));
         System.out.println(PracticeAnswers.hasSameLastDigit(12,-45,55));
         PracticeAnswers.displayFactors(-55);
-        PracticeAnswers.printSquareStar(5);
 
 
     }
