@@ -249,15 +249,48 @@ public class PracticeAnswers {
         if(num < 1){
             sb.append("Invalid Value");
         } else {
-            int i = 2;
-            {
+            int i = 1;
+           do {
                 if(num % i == 0){
                     sb.append(i+", ");
                 }
-                System.out.println(i);
                 i++;
-            }while(i <= (num/2));
+            } while (i <= (num/2));
+           sb.append(num);
         }
         System.out.println(sb);
     }
+
+    //Q12
+public static void printSquareStar1(int num){
+        if (num < 5){
+            System.out.println("Invalid Value");
+        } else {
+            int row = num, column = num;
+            String result = "";
+            for (int i = 1; i <= row; i++) {
+                result = "";
+                for (int j = 1; j <= column; j++) {
+                    if (i == 1 || j == 1 || i == row || j == row || i == j || j == num - i + 1) {
+                        result += "*";
+                    } else {
+                        result += " ";
+                    }
+
+                }
+                System.out.println(result);
+            }
+        }
+}
+
+//Q13
+    public static boolean canPack1(int bigCount, int smallCount, int goal){
+        int acc = 0;
+        for(int i = 1 ;  i <= bigCount ; i++){
+            if(acc < goal){
+                acc += i*bigCount;
+            } else if
+        }
+    }
+
 }
