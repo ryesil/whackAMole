@@ -243,10 +243,36 @@ public class PracticeAnswers {
                 firstDigitOfNum1 == lastDigitOfNum2 ||
                 lastDigitOfNum1 == firstDigitOfNum2 ||
                 lastDigitOfNum1 == lastDigitOfNum2);
+    }
 
+    //Q10
+    public static boolean hasSameLastDigit(int a, int b, int c) {
+        if (a < 10 || a > 1000 || b < 10 || b > 1000 || c < 10 || c > 1000) {
+            return false;
+        }
+        int lastDigitA = a % 10;
+        int lastDigitB = b % 10;
+        int lastDigitC = c % 10;
 
-
+        return (lastDigitA == lastDigitB) || (lastDigitA == lastDigitC) || (lastDigitB == lastDigitC);
 
     }
 
+    //Q11
+    public static void displayFactors(int num) {
+        if (num < 1) {
+            System.out.println("Invalid Value");
+            return;
+        }
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
+
+
+
 }
+
