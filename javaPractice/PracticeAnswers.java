@@ -284,13 +284,74 @@ public static void printSquareStar1(int num){
 }
 
 //Q13
-    public static boolean canPack1(int bigCount, int smallCount, int goal){
-        int acc = 0;
-        for(int i = 1 ;  i <= bigCount ; i++){
-            if(acc < goal){
-                acc += i*bigCount;
-            } else if
+public static boolean canPack(int bigCount, int smallCount, int goal) {
+    int bigSum = bigCount * 5;
+    int smallSum = smallCount;
+    int finalSum = bigSum + smallSum;
+    if (Stream.of(bigCount, smallCount, goal).anyMatch(val -> val < 0) || finalSum < goal) {
+        return false;
+    } else if (bigSum == goal || smallSum >= goal) {
+        return true;
+    } else {
+        for (int i = bigCount; i > 0; i--) {
+            if (i * 5 < goal && ((goal - i * 5) <= smallSum)) {
+                return true;
+            }
         }
+        return false;
+    }
+}
+    //Q14
+    public static String numberToWords(int number) {
+        String finalStr = "";
+        String[] strArr = String.valueOf(number).split("");
+        for (String digit : strArr) {
+            switch (digit) {
+                case "0":
+                    finalStr += "Zero ";
+                    break;
+                case "1":
+                    finalStr += "One ";
+                    break;
+                case "2":
+                    finalStr += "Two ";
+                    break;
+                case "3":
+                    finalStr += "Three ";
+                    break;
+                case "4":
+                    finalStr += "Four ";
+                    break;
+                case "5":
+                    finalStr += "Five ";
+                    break;
+                case "6":
+                    finalStr += "Six ";
+                    break;
+                case "7":
+                    finalStr += "Seven ";
+                    break;
+                case "8":
+                    finalStr += "Eight ";
+                case "9":
+                    finalStr += "Nine ";
+            }
+        }
+        return finalStr.trim();
+    }
+
+    //Q15
+    public static Boolean hasSharedDigit1(int num1, int num2) {
+        Set<String> set = new HashSet<>();
+        if (num1 < 10 || num1 > 99 || num2 < 10 || num2 > 99) {
+            return false;
+        } else {
+            String[] str = (Integer.toString(num1) + Integer.toString(num2)).split("");
+            for (String el : str) {
+                set.add(el);
+            }
+        }
+        return set.size() < 4;
     }
 
 }
