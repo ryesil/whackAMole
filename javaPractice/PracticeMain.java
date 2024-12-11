@@ -27,8 +27,12 @@ public class PracticeMain {
 //        PracticeAnswers.sumFirstAndLastDigit2(-18);
 //        System.out.println(PracticeAnswers.findEvenDigitSum(-123));
 //        System.out.println(PracticeAnswers.hasSharedDigit2(32,562));
-        System.out.println(PracticeAnswers.hasSameLastDigit(12,-45,55));
-        PracticeAnswers.displayFactors(-55);
+//        System.out.println(PracticeAnswers.hasSameLastDigit(12,-45,55));
+//        PracticeAnswers.displayFactors(-55);
+        System.out.println(PracticeAnswers.canPack(5,2,-11));
+        PracticeAnswers.numberToWord(2304);
+        System.out.println(PracticeAnswers.hasSharedDigit(35,55));;
+
 
 
     }

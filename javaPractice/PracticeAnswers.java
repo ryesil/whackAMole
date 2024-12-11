@@ -272,6 +272,86 @@ public class PracticeAnswers {
         System.out.println();
     }
 
+    //Q13
+    public static boolean canPack(int bigCount, int smallCount, int goal) {
+        int sum = bigCount + smallCount;
+        if (bigCount < 0 || smallCount < 0 || goal < 0 || sum < 0) {
+            return false;
+        }
+        int maxBigUsed = goal / 5;
+        int bigBagToUse = Math.min(maxBigUsed, bigCount);
+
+        int remainingKilos = goal - (bigBagToUse * 5);
+        return remainingKilos <= smallCount;
+
+    }
+
+    //Q14
+    public static void numberToWord(int num) {
+        if (num < 0) {
+            System.out.println("Invalid value");
+        }
+        String str = "";
+        String arr[] = String.valueOf(num).split("");
+
+        for (String s : arr) {
+            switch (s) {
+                case "0":
+                    str += "Zero "
+                    ;
+                    break;
+                case "1":
+                    str += "One ";
+                    break;
+                case "2":
+                    str += "Two ";
+                    break;
+                case "3":
+                    str += "Three ";
+                    break;
+                case "4":
+                    str += "Four ";
+                    break;
+                case "5":
+                    str += "Five ";
+                    break;
+                case "6":
+                    str += "Six ";
+                    break;
+                case "7":
+                    str += "Seven ";
+                    break;
+                case "8":
+                    str += "Eight ";
+                    break;
+                case "9":
+                    str += "Nine ";
+                    break;
+
+            }
+
+        }
+        System.out.println(str);
+    }
+
+    //Q15
+    public static boolean hasSharedDigit(int a, int b) {
+        if (a < 10 || a > 100 || b < 10 || b > 100) {
+            return false;
+        }
+        int lastDigitA = a % 10;
+        int firstDigitA = a / 10;
+
+        int lastDigitB = b % 10;
+        int firstDigitB = b / 10;
+
+
+        return (firstDigitA == firstDigitB ||
+                firstDigitA == lastDigitB ||
+                lastDigitA == firstDigitB ||
+                lastDigitA == lastDigitB);
+
+    }
 
 
 }
