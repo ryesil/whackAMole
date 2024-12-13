@@ -1,8 +1,6 @@
 package javaPractice;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -193,9 +191,7 @@ public class PracticeAnswers {
         }
     }
 
-
-    //Q7
-    public static int sumFirstAndLastDigit1(int num) {
+    public static int sumFirstAndLastDigit1( int num){
         int sum = 0;
         if (num < 0) {
             return -1;
@@ -227,6 +223,154 @@ public class PracticeAnswers {
         return sum;
     }
 
+    //Q8
+    public static int getEvenSum1(int number){
+        return Arrays.stream(String.valueOf(number).split("")).map(numStr -> Integer.parseInt(numStr)).filter(x-> x%2 == 0).reduce(0, (a,b)->a+b);
+    }
+
+    public static int getEvenSum2(int number){
+        return Arrays.stream(String.valueOf(number).split("")).mapToInt(numStr -> Integer.parseInt(numStr)).filter(x->x%2 == 0).sum();
+    }
+
+
+    //Q9
+    public static boolean hasSharedDigit(int num1, int num2){
+        if(num1 > 99 || num2 > 99 || num1 < 10 || num2 < 10){
+            return false;
+        } else {
+           String num2Str = String.valueOf(num2);
+           {
+             int remainder = num1 % 10;
+            if(num2Str.contains(""+remainder)){
+                return true;
+            }
+           }while(num1 > 10);
+        }
+        return false;
+    }
+
+
+    //Q10
+    public static boolean hasSameLastDigit(int num1, int num2, int num3){
+        if(Stream.of(num1, num2, num3).anyMatch(num -> num < 10 || num > 1000)){
+            return false;
+        } else {
+         return Stream.of(num1, num2, num3).map(num -> num%10).collect(Collectors.toSet()).size() != 3;
+        }
+    }
+
+    //Q11
+    public static void printFactors(int num){
+        StringBuilder sb = new StringBuilder();
+        if(num < 1){
+            sb.append("Invalid Value");
+        } else {
+            int i = 1;
+           do {
+                if(num % i == 0){
+                    sb.append(i+", ");
+                }
+                i++;
+            } while (i <= (num/2));
+           sb.append(num);
+        }
+        System.out.println(sb);
+    }
+
+    //Q12
+public static void printSquareStar1(int num){
+        if (num < 5){
+            System.out.println("Invalid Value");
+        } else {
+            int row = num, column = num;
+            String result = "";
+            for (int i = 1; i <= row; i++) {
+                result = "";
+                for (int j = 1; j <= column; j++) {
+                    if (i == 1 || j == 1 || i == row || j == row || i == j || j == num - i + 1) {
+                        result += "*";
+                    } else {
+                        result += " ";
+                    }
+
+                }
+                System.out.println(result);
+            }
+        }
+}
+
+//Q13
+public static boolean canPack(int bigCount, int smallCount, int goal) {
+    int bigSum = bigCount * 5;
+    int smallSum = smallCount;
+    int finalSum = bigSum + smallSum;
+    if (Stream.of(bigCount, smallCount, goal).anyMatch(val -> val < 0) || finalSum < goal) {
+        return false;
+    } else if (bigSum == goal || smallSum >= goal) {
+        return true;
+    } else {
+        for (int i = bigCount; i > 0; i--) {
+            if (i * 5 < goal && ((goal - i * 5) <= smallSum)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+    //Q14
+    public static String numberToWords(int number) {
+        String finalStr = "";
+        String[] strArr = String.valueOf(number).split("");
+        for (String digit : strArr) {
+            switch (digit) {
+                case "0":
+                    finalStr += "Zero ";
+                    break;
+                case "1":
+                    finalStr += "One ";
+                    break;
+                case "2":
+                    finalStr += "Two ";
+                    break;
+                case "3":
+                    finalStr += "Three ";
+                    break;
+                case "4":
+                    finalStr += "Four ";
+                    break;
+                case "5":
+                    finalStr += "Five ";
+                    break;
+                case "6":
+                    finalStr += "Six ";
+                    break;
+                case "7":
+                    finalStr += "Seven ";
+                    break;
+                case "8":
+                    finalStr += "Eight ";
+                case "9":
+                    finalStr += "Nine ";
+            }
+        }
+        return finalStr.trim();
+    }
+
+    //Q15
+    public static Boolean hasSharedDigit1(int num1, int num2) {
+        Set<String> set = new HashSet<>();
+        if (num1 < 10 || num1 > 99 || num2 < 10 || num2 > 99) {
+            return false;
+        } else {
+            String[] str = (Integer.toString(num1) + Integer.toString(num2)).split("");
+            for (String el : str) {
+                set.add(el);
+            }
+        }
+        return set.size() < 4;
+    }
+
+}
     //Q9
     public static boolean hasSharedDigit2(int num1, int num2) {
         if (num1 < 10 || num1 > 99 || num2 < 10 || num2 > 99) {
