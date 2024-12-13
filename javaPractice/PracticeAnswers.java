@@ -178,11 +178,11 @@ public class PracticeAnswers {
         return firstDigit + lastDigit;
     }
 
-    public static void sumFirstAndLastDigit2(int num){
-        if (num<0){
+    public static void sumFirstAndLastDigit2(int num) {
+        if (num < 0) {
             System.out.println(-1);
             return;
-        }else{
+        } else {
             String arr[] = String.valueOf(num).trim().split("");
             int a = Integer.parseInt(arr[0]);
             int b = Integer.parseInt(arr[arr.length - 1]);
@@ -193,17 +193,33 @@ public class PracticeAnswers {
 
     public static int sumFirstAndLastDigit1( int num){
         int sum = 0;
-        if(num < 0){
+        if (num < 0) {
             return -1;
-        } else if ( num < 10 ) {
+        } else if (num < 10) {
             return num;
-        } else  {
+        } else {
 
-                String[] numString = String.valueOf(num).split("");
-                for( int i = 0 ; i < numString.length; i += numString.length-1){
-                    sum += Integer.parseInt(numString[i]);
-                }
+            String[] numString = String.valueOf(num).split("");
+            for (int i = 0; i < numString.length; i += numString.length - 1) {
+                sum += Integer.parseInt(numString[i]);
             }
+        }
+        return sum;
+    }
+
+    //Q8
+    public static int findEvenDigitSum(int num) {
+        if (num < 0){
+            return -1;
+        }
+        int sum = 0;
+        while (num > 0) {
+            int lastDigit = num % 10;
+            if (lastDigit % 2 == 0) {
+                sum += lastDigit;
+            }
+            num/=10;
+        }
         return sum;
     }
 
