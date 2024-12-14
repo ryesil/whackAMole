@@ -1,11 +1,5 @@
 package javaPractice;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 public class PracticeMain {
 
 
@@ -29,9 +23,9 @@ public class PracticeMain {
 //        System.out.println(PracticeAnswers.hasSharedDigit2(32,562));
 //        System.out.println(PracticeAnswers.hasSameLastDigit(12,-45,55));
 //        PracticeAnswers.displayFactors(-55);
-        System.out.println(PracticeAnswers.canPack(5,2,-11));
-        PracticeAnswers.numberToWord(2304);
-        System.out.println(PracticeAnswers.hasSharedDigit(35,55));;
+//        System.out.println(PracticeAnswers.canPack(5,2,-11));
+//        PracticeAnswers.numberToWord(2304);
+//        System.out.println(PracticeAnswers.hasSharedDigit(35,55));
 
 
 
@@ -42,7 +36,38 @@ public class PracticeMain {
 //        System.out.println(PracticeAnswers.hasSharedDigit(12,82));
 //        System.out.println(PracticeAnswers.hasSameLastDigit(12, 23, 53));
 //        PracticeAnswers.printFactors(10);
-        PracticeAnswers.printSquareStar1(4);
+//        PracticeAnswers.printSquareStar1(4);
+
+
+       SimpleCalculatorSn calculatorSn = new SimpleCalculatorSn();
+       calculatorSn.setFirstNumber(5.0);
+       calculatorSn.setSecondNumber(4);
+       System.out.println("add = " + calculatorSn.getAdditionResult());
+       System.out.println("subtract = " + calculatorSn.getSubtractionResult());
+
+       calculatorSn.setFirstNumber(5.25);
+       calculatorSn.setSecondNumber(0);
+       System.out.println("multiply = " + calculatorSn.getMultiplicationResult());
+       System.out.println("divide = " + calculatorSn.getDivisionResult());
+
+       //PersonSn personSn = new PersonSn();
+       //personSn.setFirstName("");
+       //personSn.setSecondName("");
+       //personSn.setAge(10);
+       //System.out.println("fullName = " + personSn.getFullName());
+       //System.out.println("teen = " + personSn.isTeen());
+       //personSn.setFirstName("John");
+       //personSn.setAge(18);
+       //System.out.println("fullName = " + personSn.getFullName());
+       //System.out.println("teen = " + personSn.isTeen());
+       //personSn.setSecondName("Smith");
+       //System.out.println("fullName = " + personSn.getFullName());
+
+
+
+
+
+
     }
 
 }
