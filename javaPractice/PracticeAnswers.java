@@ -234,7 +234,7 @@ public class PracticeAnswers {
 
 
     //Q9
-    public static boolean hasSharedDigit(int num1, int num2){
+    public static boolean hasSharedDigit2(int num1, int num2){
         if(num1 > 99 || num2 > 99 || num1 < 10 || num2 < 10){
             return false;
         } else {
@@ -251,7 +251,7 @@ public class PracticeAnswers {
 
 
     //Q10
-    public static boolean hasSameLastDigit(int num1, int num2, int num3){
+    public static boolean hasSameLastDigit2(int num1, int num2, int num3){
         if(Stream.of(num1, num2, num3).anyMatch(num -> num < 10 || num > 1000)){
             return false;
         } else {
@@ -300,7 +300,7 @@ public static void printSquareStar1(int num){
 }
 
 //Q13
-public static boolean canPack(int bigCount, int smallCount, int goal) {
+public static boolean canPack3(int bigCount, int smallCount, int goal) {
     int bigSum = bigCount * 5;
     int smallSum = smallCount;
     int finalSum = bigSum + smallSum;
@@ -370,9 +370,9 @@ public static boolean canPack(int bigCount, int smallCount, int goal) {
         return set.size() < 4;
     }
 
-}
+
     //Q9
-    public static boolean hasSharedDigit2(int num1, int num2) {
+    public static boolean hasSharedDigit21(int num1, int num2) {
         if (num1 < 10 || num1 > 99 || num2 < 10 || num2 > 99) {
             return false;
         }
