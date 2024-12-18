@@ -27,8 +27,6 @@ public class PracticeMain {
 //        PracticeAnswers.numberToWord(2304);
 //        System.out.println(PracticeAnswers.hasSharedDigit(35,55));
 
-
-
 //        System.out.println(PracticeAnswers.sumFirstAndLastDigit(456));
 //        System.out.println(PracticeAnswers.sumFirstAndLastDigit(252));
 //        PracticeAnswers.sumFirstAndLastDigit2(-18);
@@ -39,16 +37,16 @@ public class PracticeMain {
 //        PracticeAnswers.printSquareStar1(4);
 
 
-       SimpleCalculatorSn calculatorSn = new SimpleCalculatorSn();
-       calculatorSn.setFirstNumber(5.0);
-       calculatorSn.setSecondNumber(4);
-       System.out.println("add = " + calculatorSn.getAdditionResult());
-       System.out.println("subtract = " + calculatorSn.getSubtractionResult());
-
-       calculatorSn.setFirstNumber(5.25);
-       calculatorSn.setSecondNumber(0);
-       System.out.println("multiply = " + calculatorSn.getMultiplicationResult());
-       System.out.println("divide = " + calculatorSn.getDivisionResult());
+//       SimpleCalculatorSn calculatorSn = new SimpleCalculatorSn();
+//       calculatorSn.setFirstNumber(5.0);
+//       calculatorSn.setSecondNumber(4);
+//       System.out.println("add = " + calculatorSn.getAdditionResult());
+//       System.out.println("subtract = " + calculatorSn.getSubtractionResult());
+//
+//       calculatorSn.setFirstNumber(5.25);
+//       calculatorSn.setSecondNumber(0);
+//       System.out.println("multiply = " + calculatorSn.getMultiplicationResult());
+//       System.out.println("divide = " + calculatorSn.getDivisionResult());
 
        //PersonSn personSn = new PersonSn();
        //personSn.setFirstName("");
@@ -62,6 +60,13 @@ public class PracticeMain {
        //System.out.println("teen = " + personSn.isTeen());
        //personSn.setSecondName("Smith");
        //System.out.println("fullName = " + personSn.getFullName());
+
+       CircleSn circleAreaSn = new CircleSn(5);
+       System.out.println(circleAreaSn.getArea());
+
+       CylinderSn cylinder = new CylinderSn(2,2);
+        System.out.println(cylinder.getArea());
+       System.out.println(cylinder.getVolume());
 
 
 
