@@ -357,5 +357,56 @@ public class PracticeQuestions {
 //    cuboid.height= 5.0
 //    cuboid.volume= 250.0
 
+  //Q20
+//    Composition
+//    Directions:
+//    This is an exercise in Class Composition. To complete the exercise, you must create five classes with associated member variables and methods.
+//    The five classes should be created as follows:
+//            1) Create a class and name it Lamp. Inside this class should be declared three member variables: style of type String, battery of type boolean, and globRating of     type int. All variables should be marked private. A constructor needs to be created which accepts the three member variables as parameters. In addition, four methods should also be created: turnOn() has no return type and should print a message that the lamp is being turned on; getStyle() returns the lamp style; isBattery returns the value of battery; and getGlobRating() returns the globRating of the lamp.
+//            2) Create a class and name it Bed. Five private member variables should be declared: style of type String, and pillows, height, sheets, quilt of type int. A constructor should be coded which accepts these five member variables as parameters. Also, six methods should be defined: make() has no return type and prints a message to the effect that the bed is being made; getStyle() which returns the value of style; getPillows() returns the number of pillows; getHeight() returns the height of the bed; getSheets() returns the number of sheets on the bed; and getQuilt() returns the value of quilt.
+//            3) Create a class with the name Ceiling. There are two member variables for this one, height and paintedColor, both of type int. There should also be a constructor which accepts both member variables as parameters. There are also two additional methods which should be defined: getHeight() shall return the value of height and getPaintedColor() should return the value of paintedColor.
+//            4) Create a class with the name Wall. It contains one member variable, direction, and is of type String. A constructor for Wall should accept one parameter for the member variable direction. A getter should also be defined for the direction field called getDirection().
+//            5) Create a class with the name Bedroom. This class contains eight member variables:
+//    name of type String; wall1, wall2, wall3, wall4 of type Wall; ceiling of type Ceiling; bed of type Bed, and lamp of type Lamp. The class constructor should accept all eight of the member variables as parameters, and there should also be two additional methods:
+//    getLamp() which returns an object of type Lamp, and makeBed() which prints a message that the bed is being made and also calls the make() method in the Bed class.
+//    Input/Output:
+//    Once you have completed coding your classes you should then use the following code in your main class to test your code and for correct output. This way you can be sure that your code works before pasting your five classes into the code evaluator.
+//            Wall wall1 = new Wall("West");
+//    Wall wall2 = new Wall("East");
+//    Wall wall3 = new Wall("South");
+//    Wall wall4 = new Wall("North");
+//    Ceiling ceiling = new Ceiling(12, 55);
+//    Bed bed = new Bed("Modern", 4, 3, 2, 1);
+//    Lamp lamp = new Lamp("Classic", false, 75);
+//    Bedroom bedRoom = new Bedroom("YOUR NAME HERE", wall1, wall2, wall3, wall4, ceiling,bed, lamp);
+//bedRoom.makeBed();
+//bedRoom.getLamp().turnOn();
+
+   //Q20
+//    Encapsulation
+//    Directions:
+//    In this exercise you will create one class and name it Printer. This class will have two member variables of type int, tonerLevel and pagesPrinted, and one of type boolean called duplex. All three fields will have private access. The constructor will accept two of these variables, tonerLevel and duplex, as parameters following these rules:
+//    tonerLevel must be greater than -1 but less than or equal to 100. If it does not meet these conditions then it should be initialized to -1.
+//    duplex should be initialized to the value of the parameter.
+//    In addition, pagesPrinted should be initialized to 0.
+//    Three other methods need to be defined in this way:
+//    addToner will accept one parameter, tonerAmount of type int. First off, tonerAmount should be greater than 0 and less than or equal to 100. If this condition is met a second test must be included to test whether tonerLevel plus tonerAmount is greater than 100. If so, the method should return -1. If not then tonerLevel should have the incoming tonerAmount added to it and the new tonerLevel should then be returned by the method. Also, if the initial condition test fails, then the method should return -1.
+//    printPages will accept one parameter, pages of type int. A variable called pagesToPrint should be created and initialized to the value of the incoming parameter.   A conditional check should be performed on whether the Printer class field, duplex, is either "true" or "false". If "true" then a calculation must be performed to determine the number of pages needed to print the job double sided. The pagesToPrint value is then added to the class field pagesPrinted, but the value of pagesToPrint should be returned by the method.
+//    getPagesPrinted has no parameters and merely returns the value of the member variable pagesPrinted.
+//    Example input:
+//    Printer printer = new Printer(50, true);
+//System.out.println(printer.addToner(50));
+//System.out.println("initial page count = " +printer.getPagesPrinted());
+//    int pagesPrinted = printer.printPages(4);
+//System.out.println("Pages printed was " + pagesPrinted +" new total print count for printer = " +printer.getPagesPrinted());
+//    pagesPrinted = printer.printPages(2);
+//System.out.println("Pages printed was " + pagesPrinted +" new total print count for printer = " +printer.getPagesPrinted());
+//    Example output:
+//            100
+//    initial page count = 0
+//    Printing in duplex mode
+//    Pages printed was 2 new total print count for printer = 2
+//    Printing in duplex mode
+//    Pages printed was 1 new total print count for printer = 3
 
 }
