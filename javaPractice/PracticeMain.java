@@ -68,16 +68,26 @@ public class PracticeMain {
         // System.out.println(cylinder.getArea());
         //System.out.println(cylinder.getVolume());
 
-        RectangleSn rectangleSn = new RectangleSn(5, 10);
-        System.out.println("rectangle.width= " + rectangleSn.getWidth());
-        System.out.println("rectangle.length= " + rectangleSn.getLength());
-        System.out.println("rectangle.area= " + rectangleSn.getArea());
-        CuboidSn cuboidSn = new CuboidSn(5,10,5);
-        System.out.println("cuboid.width= " + cuboidSn.getWidth());
-        System.out.println("cuboid.length= " + cuboidSn.getLength());
-        System.out.println("cuboid.area= " + cuboidSn.getArea());
-        System.out.println("cuboid.height= " + cuboidSn.getHeight());
-        System.out.println("cuboid.volume= " + cuboidSn.getVolume());
+        //RectangleSn rectangleSn = new RectangleSn(5, 10);
+        //System.out.println("rectangle.width= " + rectangleSn.getWidth());
+        //System.out.println("rectangle.length= " + rectangleSn.getLength());
+        //System.out.println("rectangle.area= " + rectangleSn.getArea());
+        //CuboidSn cuboidSn = new CuboidSn(5,10,5);
+        //System.out.println("cuboid.width= " + cuboidSn.getWidth());
+        //System.out.println("cuboid.length= " + cuboidSn.getLength());
+        //System.out.println("cuboid.area= " + cuboidSn.getArea());
+        //System.out.println("cuboid.height= " + cuboidSn.getHeight());
+        //System.out.println("cuboid.volume= " + cuboidSn.getVolume());
+
+        EmployeeSn emp = new EmployeeSn("John", 3000);
+        System.out.println(emp.getName() + " Salary: " + emp.getBaseSalary());
+
+        ManagerSn mgr = new ManagerSn("Sarah", 4000, 2000);
+        System.out.println(mgr.getName() + " Salary: " + mgr.getBaseSalary());
+
+        DeveloperSn dev = new DeveloperSn("Alex", 3000, 3);
+        System.out.println(dev.getName() + " Salary: " + dev.getBaseSalary());
+
 
 
     }
