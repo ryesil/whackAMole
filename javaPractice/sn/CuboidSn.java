@@ -1,4 +1,4 @@
-package javaPractice;
+package javaPractice.sn;
 
 public class CuboidSn extends RectangleSn {
     private double height;
