@@ -1,4 +1,4 @@
-package javaPractice;
+package javaPractice.ry;
 
 public class CircleRY {
     private double radius;

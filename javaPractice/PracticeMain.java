@@ -1,5 +1,9 @@
 package javaPractice;
 
+import javaPractice.sn.DeveloperSn;
+import javaPractice.sn.EmployeeSn;
+import javaPractice.sn.ManagerSn;
+
 public class PracticeMain {
 
 

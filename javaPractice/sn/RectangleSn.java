@@ -1,4 +1,4 @@
-package javaPractice;
+package javaPractice.sn;
 
 public class RectangleSn {
     private double width;

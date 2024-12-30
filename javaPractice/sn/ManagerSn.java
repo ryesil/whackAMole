@@ -1,4 +1,4 @@
-package javaPractice;
+package javaPractice.sn;
 
 public class ManagerSn extends EmployeeSn {
     private double bonus;

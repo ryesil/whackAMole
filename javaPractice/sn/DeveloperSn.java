@@ -1,4 +1,4 @@
-package javaPractice;
+package javaPractice.sn;
 
 public class DeveloperSn extends EmployeeSn {
     private int projectCount;
