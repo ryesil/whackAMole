@@ -99,16 +99,16 @@ public class PracticeMain {
        //System.out.println(dev.getName() + " Salary: " + dev.getBaseSalary());
 
         // Test SavingsAccount
-        SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
-        System.out.println("Savings Account Balance: " + savings.getBalance());
-        System.out.println("Interest: " + savings.calculateInterest());
-
-        // Test CurrentAccount
-        CurrentAccountSn current = new CurrentAccountSn("67890", 500, 200);
-        current.withdraw(600);
-        System.out.println("Current Account Balance: " + current.getBalance());
-        current.withdraw(200);
-        System.out.println("Current Account Balance after overdraft attempt: " + current.getBalance());
+//        SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
+//        System.out.println("Savings Account Balance: " + savings.getBalance());
+//        System.out.println("Interest: " + savings.calculateInterest());
+//
+//        // Test CurrentAccount
+//        CurrentAccountSn current = new CurrentAccountSn("67890", 500, 200);
+//        current.withdraw(600);
+//        System.out.println("Current Account Balance: " + current.getBalance());
+//        current.withdraw(200);
+//        System.out.println("Current Account Balance after overdraft attempt: " + current.getBalance());
 
 
 //        AnimalRY lion = new LionRY("lion", 24);
@@ -121,6 +121,9 @@ public class PracticeMain {
 //        universityRY.addEmployee(new UniversityEmployeeRY("Ramazan", 39, 85000));
 //        universityRY.addEmployee(new UniversityProfRY("Ramazan", 29, 125000, "Math"));
 //        System.out.println(universityRY.getTotalSalaries());
+
+
+
 
     }
 

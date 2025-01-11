@@ -531,4 +531,55 @@ public class PracticeQuestions {
 
      */
 
+
+//    Arrays
+  /*
+   Q26
+Sorted Array
+Create a program using arrays that sorts a list of integers in descending order.
+Descending order is highest value to lowest.
+In other words if the array had the values in it [106, 26, 81, 5, 15] your program should ultimately have an array with [106, 81, 26, 15, 5] in it.
+Set up the program so that the numbers to sort are read in from the keyboard (Scanner).
+Implement the following methods:
+getIntegers has one parameter of type int which is the size of the array. It returns an array of entered integers from the keyboard.
+printArray accepts an array and prints out the contents of the array. It should be printed in the following format:
+Element 0 contents 106
+Element 1 contents 81
+Element 2 contents 26
+Element 3 contents 15
+Element 4 contents 5
+sortIntegers accepts the unsorted array. It should sort the array and return a new array containing the sorted numbers.
+The scenario is:
+1. getIntegers() is called.
+2. The returned array from getIntegers() is then used to call sortIntegers().
+3. The returned array from sortIntegers() is then printed to the console.
+     */
+
+
+    /*
+    Q27
+    Minimum Element
+Write a method called readInteger() that has no parameters and returns an int.
+It needs to read in an integer from the user - this represents how many elements the user needs to enter.
+Write another method called readElements() that has one parameter of type int
+The method needs to read from the console until all the elements are entered, and then return an array containing the elements entered.
+And finally, write a method called findMin() with one parameter of type int[]. The method needs to return the minimum value in the array.
+The scenario is:
+1. readInteger() is called.
+2. The number returned by readInteger() is then used to call readElements().
+3. The array returned from readElements() is used to call findMin().
+4. findMin() returns the minimum number.
+     */
+
+/*
+Q28
+Reverse Array
+Write a method called reverse() with an int array as a parameter.
+The method should not return any value. In other words, the method is allowed to modify the array parameter.
+To reverse the array, you have to swap the elements, so that the first element is swapped with the last element and so on.
+For example, if the array is [1, 2, 3, 4, 5], then the reversed array is [5, 4, 3, 2, 1].
+The method should first print out the newly passed in array as Array = [1, 2, 3, 4, 5]
+and then once it's been reversed, print it out as Reversed array = [5, 4, 3, 2, 1]
+ */
+
 }
