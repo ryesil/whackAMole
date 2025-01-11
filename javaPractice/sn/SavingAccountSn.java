@@ -1,6 +1,8 @@
-package javaPractice;
+package javaPractice.sn;
 
-public class SavingAccountSn extends BankAccountSn{
+import javaPractice.sn.BankAccountSn;
+
+public class SavingAccountSn extends BankAccountSn {
     private double interestRate;
 
     // Constructor

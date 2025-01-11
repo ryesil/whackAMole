@@ -416,26 +416,26 @@ public class PracticeQuestions {
 
     //Q22: Zoo Management System
 
-    //Create an abstract class Animal with the following:
+    //Create an abstract class AnimalRY with the following:
     //Fields: name (String), age (int).
     //Constructor to initialize name and age.
     //Abstract method makeSound() to be implemented by subclasses.
     //Concrete method getInfo() that returns "Name: [name], Age: [age]".
-    //Create subclasses Lion and Elephant that extend Animal.
+    //Create subclasses Lion and Elephant that extend AnimalRY.
     //
     //Lion overrides makeSound() to return "Roar!".
     //Elephant overrides makeSound() to return "Trumpet!".
     //Create a class Zoo to manage animals:
     //
-    //Field: List<Animal> animals.
-    //Method addAnimal(Animal animal) to add animals to the zoo.
+    //Field: List<AnimalRY> animals.
+    //Method addAnimal(AnimalRY animal) to add animals to the zoo.
     //Method getAnimalSounds() to iterate through all animals and print their sounds.
     /*Test Codes
     Zoo zoo = new Zoo();
     zoo.addAnimal(new Lion("Leo", 5));
     zoo.addAnimal(new Elephant("Dumbo", 10));
 
-    System.out.println("Animal Sounds in the Zoo:");
+    System.out.println("AnimalRY Sounds in the Zoo:");
     zoo.getAnimalSounds();
      */
 
@@ -480,10 +480,10 @@ public class PracticeQuestions {
     //Fields: title (String), id (int).
     //Constructor to initialize title and id.
     //Abstract method getDetails() to return information about the item.
-    //Create subclasses Book and Magazine that extend LibraryItem:
+    //Create subclasses BookRY and MagazineRY that extend LibraryItem:
     //
-    //Book: Add fields author (String) and pages (int).
-    //Magazine: Add fields issueNumber (int) and publisher (String).
+    //BookRY: Add fields author (String) and pages (int).
+    //MagazineRY: Add fields issueNumber (int) and publisher (String).
     //Both classes implement getDetails() to include their specific fields.
     //Create a Library class:
     //
@@ -494,8 +494,8 @@ public class PracticeQuestions {
 
     /*Test Codes
     Library library = new Library();
-    library.addItem(new Book("Java Programming", 1, "John Doe", 500));
-    library.addItem(new Magazine("Tech Monthly", 2, 45, "TechCorp"));
+    library.addItem(new BookRY("Java Programming", 1, "John Doe", 500));
+    library.addItem(new MagazineRY("Tech Monthly", 2, 45, "TechCorp"));
 
     library.listAllItems();
     System.out.println("Item with ID 2: " + library.findItemById(2));

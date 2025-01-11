@@ -1,4 +1,4 @@
-package javaPractice;
+package javaPractice.sn;
 
 public class CylinderSn extends CircleSn {
     private double height;
