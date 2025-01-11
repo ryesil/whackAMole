@@ -1,6 +1,7 @@
 package javaPractice;
 
-import javaPractice.ry.*;
+import javaPractice.sn.CurrentAccountSn;
+import javaPractice.sn.SavingAccountSn;
 
 public class PracticeMain {
 
