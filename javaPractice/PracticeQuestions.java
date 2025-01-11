@@ -528,6 +528,7 @@ public class PracticeQuestions {
 
     int[] daysArray = {3, 5};  // First vehicle rented for 3 days, second for 5 days.
     System.out.println("Total Revenue: $" + service.calculateTotalRevenue(daysArray));
+
      */
 
 }
