@@ -1,6 +1,8 @@
-package javaPractice;
+package javaPractice.sn;
 
-public class CurrentAccountSn extends BankAccountSn{
+import javaPractice.sn.BankAccountSn;
+
+public class CurrentAccountSn extends BankAccountSn {
     private double overdraftLimit;
 
     public CurrentAccountSn(String accountNumber, double balance, double overdraftLimit) {

@@ -2,6 +2,8 @@ package javaPractice;
 
 import javaPractice.ry.*;
 
+import java.util.Arrays;
+
 public class PracticeMain {
 
 
@@ -123,7 +125,7 @@ public class PracticeMain {
 //        System.out.println(universityRY.getTotalSalaries());
 
 
-
+        System.out.println(Arrays.toString(Q26ToQ28Answers.orderIntegers1(new int[] {14,3,2,1,12})));
 
     }
 
