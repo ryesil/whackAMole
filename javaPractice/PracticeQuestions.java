@@ -416,26 +416,26 @@ public class PracticeQuestions {
 
     //Q22: Zoo Management System
 
-    //Create an abstract class Animal with the following:
+    //Create an abstract class AnimalRY with the following:
     //Fields: name (String), age (int).
     //Constructor to initialize name and age.
     //Abstract method makeSound() to be implemented by subclasses.
     //Concrete method getInfo() that returns "Name: [name], Age: [age]".
-    //Create subclasses Lion and Elephant that extend Animal.
+    //Create subclasses Lion and Elephant that extend AnimalRY.
     //
     //Lion overrides makeSound() to return "Roar!".
     //Elephant overrides makeSound() to return "Trumpet!".
     //Create a class Zoo to manage animals:
     //
-    //Field: List<Animal> animals.
-    //Method addAnimal(Animal animal) to add animals to the zoo.
+    //Field: List<AnimalRY> animals.
+    //Method addAnimal(AnimalRY animal) to add animals to the zoo.
     //Method getAnimalSounds() to iterate through all animals and print their sounds.
     /*Test Codes
     Zoo zoo = new Zoo();
     zoo.addAnimal(new Lion("Leo", 5));
     zoo.addAnimal(new Elephant("Dumbo", 10));
 
-    System.out.println("Animal Sounds in the Zoo:");
+    System.out.println("AnimalRY Sounds in the Zoo:");
     zoo.getAnimalSounds();
      */
 
@@ -480,10 +480,10 @@ public class PracticeQuestions {
     //Fields: title (String), id (int).
     //Constructor to initialize title and id.
     //Abstract method getDetails() to return information about the item.
-    //Create subclasses Book and Magazine that extend LibraryItem:
+    //Create subclasses BookRY and MagazineRY that extend LibraryItem:
     //
-    //Book: Add fields author (String) and pages (int).
-    //Magazine: Add fields issueNumber (int) and publisher (String).
+    //BookRY: Add fields author (String) and pages (int).
+    //MagazineRY: Add fields issueNumber (int) and publisher (String).
     //Both classes implement getDetails() to include their specific fields.
     //Create a Library class:
     //
@@ -494,8 +494,8 @@ public class PracticeQuestions {
 
     /*Test Codes
     Library library = new Library();
-    library.addItem(new Book("Java Programming", 1, "John Doe", 500));
-    library.addItem(new Magazine("Tech Monthly", 2, 45, "TechCorp"));
+    library.addItem(new BookRY("Java Programming", 1, "John Doe", 500));
+    library.addItem(new MagazineRY("Tech Monthly", 2, 45, "TechCorp"));
 
     library.listAllItems();
     System.out.println("Item with ID 2: " + library.findItemById(2));
@@ -530,5 +530,109 @@ public class PracticeQuestions {
     System.out.println("Total Revenue: $" + service.calculateTotalRevenue(daysArray));
 
      */
+
+
+//    Arrays
+  /*
+   Q26
+Sorted Array
+Create a program using arrays that sorts a list of integers in descending order.
+Descending order is highest value to lowest.
+In other words if the array had the values in it [106, 26, 81, 5, 15] your program should ultimately have an array with [106, 81, 26, 15, 5] in it.
+Set up the program so that the numbers to sort are read in from the keyboard (Scanner).
+Implement the following methods:
+getIntegers has one parameter of type int which is the size of the array. It returns an array of entered integers from the keyboard.
+printArray accepts an array and prints out the contents of the array. It should be printed in the following format:
+Element 0 contents 106
+Element 1 contents 81
+Element 2 contents 26
+Element 3 contents 15
+Element 4 contents 5
+sortIntegers accepts the unsorted array. It should sort the array and return a new array containing the sorted numbers.
+The scenario is:
+1. getIntegers() is called.
+2. The returned array from getIntegers() is then used to call sortIntegers().
+3. The returned array from sortIntegers() is then printed to the console.
+     */
+
+
+    /*
+    Q27
+    Minimum Element
+Write a method called readInteger() that has no parameters and returns an int.
+It needs to read in an integer from the user - this represents how many elements the user needs to enter.
+Write another method called readElements() that has one parameter of type int
+The method needs to read from the console until all the elements are entered, and then return an array containing the elements entered.
+And finally, write a method called findMin() with one parameter of type int[]. The method needs to return the minimum value in the array.
+The scenario is:
+1. readInteger() is called.
+2. The number returned by readInteger() is then used to call readElements().
+3. The array returned from readElements() is used to call findMin().
+4. findMin() returns the minimum number.
+     */
+
+/*
+Q28
+Reverse Array
+Write a method called reverse() with an int array as a parameter.
+The method should not return any value. In other words, the method is allowed to modify the array parameter.
+To reverse the array, you have to swap the elements, so that the first element is swapped with the last element and so on.
+For example, if the array is [1, 2, 3, 4, 5], then the reversed array is [5, 4, 3, 2, 1].
+The method should first print out the newly passed in array as Array = [1, 2, 3, 4, 5]
+and then once it's been reversed, print it out as Reversed array = [5, 4, 3, 2, 1]
+ */
+
+    /*
+Q29
+    It's now time for an ArrayList challenge. The challenge is to create an interactive
+    console program, with a menu of options as shown here, and functionality that I will describe now.
+    Using the Scanner class, solicit a menu choice, 0,
+            1, or 2, and process the item accordingly. 0 to quit the program.
+            1 - prompt the user for a comma-delimited list of items to add to a list.
+    And similarly, if the user enters 2, prompt them for a list, again comma-delimited,
+    to remove from the same list. The list will be a grocery
+    list and should be an ArrayList. You should use methods on the ArrayList
+    to add items, remove items, check if an item is already in the list, and print a sorted list.
+    You should print the list, sorted alphabetically, after each operation.
+    You shouldn't allow duplicate items in the list. So, that's the challenge.
+    See how you get on with it. Best of luck.
+ */
+
+ /*
+ Q30
+ Mobile Phone
+Create a program that implements a simple mobile phone with the following capabilities.
+1.  Implement the master class MobilePhone, that holds the ArrayList of Contacts, with the following attributes:
+    -  Two fields, a String called myNumber and an ArrayList of type Contact called myContacts.
+    -  A constructor that takes a String (the phone number) and initialises myNumber and instantiates myContacts.
+    -  And seven methods, they are (their functions are in their names):
+        -  addNewContact(), has one parameter of type Contact and returns a boolean. Returns true if the contact doesn't exists, or false if the contact already exists.
+        -  updateContact(), has two parameters of type Contact (the old contact that will be updated with the new contact) and returns a boolean. Returns true if the contact exists and was updated successfully, or false if the contact doesn't exists.
+        -  removeContact(), has one parameter of type Contact and returns a boolean. Returns true if the contact exists and was removed successfully, or false if the contact doesn't exists.
+        -  findContact(), has one parameter of type Contact and returns an int. The returned value is it's position in the ArrayList, it will either be -1 (doesn't exists) or a value greater than or equal to 0 (does exists).
+        -  findContact(), same as above, only it has one parameter of type String.
+        -  queryContact(), has one parameter of type String and returns a Contact. Use the String to search for the name and then return the Contact. Return null otherwise.
+        -  printContacts(), has no parameters and doesn't return anything. Print the contacts in the following format:
+Contact List:
+1. Bob -> 31415926
+2. Alice -> 16180339
+3. Tom -> 11235813
+4. Jane -> 23571113
+2. Implement the Contact class with the following attributes:
+    -  Two fields, both String, one called name and the other phoneNumber.
+    -  A constructor that takes two Strings, and initialises name and phoneNumber.
+    -  And Three methods, they are:
+        -  getName(), getter for name.
+        -  getPhoneNumber(), getter for phoneNumber.
+        -  createContact(), has two parameters of type String (the persons name and phone number) and returns an instance of Contact. This is the only method that is static.
+TIP:  In MobilePhone, use findContact() in the other methods (except printContacts()) to check if it exists before proceeding.
+TIP:  Two Contact objects are equal if they have the same name.
+TIP:  Be extremely careful about spaces in the printed message.
+NOTE:  All fields are private.
+NOTE:  Constructors should be defined as public.
+NOTE:  All methods should be defined as public (except for the two findContact() methods which are private).
+  */
+
+
 
 }
