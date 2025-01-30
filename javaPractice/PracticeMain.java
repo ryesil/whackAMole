@@ -1,9 +1,7 @@
 package javaPractice;
 
 import javaPractice.ry.*;
-import javaPractice.sn.ElephantSn;
-import javaPractice.sn.LionSn;
-import javaPractice.sn.ZooSn;
+import javaPractice.sn.*;
 
 import java.util.Arrays;
 
@@ -131,15 +129,23 @@ public class PracticeMain {
 //        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
 //        System.out.println(Q26ToQ28AnswersRY.readInteger());
 //          Q26ToQ28AnswersRY.findMin();
-        System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
+      //System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
 
-        //test animal
-        ZooSn zooSn = new ZooSn();
-        zooSn.addAnimal(new LionSn("Leo", 5));
-        zooSn.addAnimal(new ElephantSn("Dumbo", 12));
+      ////test animal
+      //ZooSn zooSn = new ZooSn();
+      //zooSn.addAnimal(new LionSn("Leo", 5));
+      //zooSn.addAnimal(new ElephantSn("Dumbo", 12));
 
-        System.out.println("AnimalSn Sounds in the Zoo:");
-        zooSn.getAnimalSounds();
+        //System.out.println("AnimalSn Sounds in the Zoo:");
+        //zooSn.getAnimalSounds();
+
+          /*Test University Personal*/
+        University university = new University();
+        university.addEmployee(new ProfessorSn("Dr. Smith", 45, 80000, "Computer Science"));
+        university.addEmployee(new AdminStaff("Alice", 35, 50000, "Finance"));
+
+        System.out.println("Total Salaries: $" + university.getTotalSalaries());
+
 
 
 
