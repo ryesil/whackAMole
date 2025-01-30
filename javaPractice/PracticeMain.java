@@ -1,6 +1,9 @@
 package javaPractice;
 
 import javaPractice.ry.*;
+import javaPractice.sn.ElephantSn;
+import javaPractice.sn.LionSn;
+import javaPractice.sn.ZooSn;
 
 import java.util.Arrays;
 
@@ -129,6 +132,17 @@ public class PracticeMain {
 //        System.out.println(Q26ToQ28AnswersRY.readInteger());
 //          Q26ToQ28AnswersRY.findMin();
         System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
+
+        //test animal
+        ZooSn zooSn = new ZooSn();
+        zooSn.addAnimal(new LionSn("Leo", 5));
+        zooSn.addAnimal(new ElephantSn("Dumbo", 12));
+
+        System.out.println("AnimalSn Sounds in the Zoo:");
+        zooSn.getAnimalSounds();
+
+
+
     }
 
 }
