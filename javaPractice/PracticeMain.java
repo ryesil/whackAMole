@@ -93,10 +93,34 @@ public class PracticeMain {
 
        //ManagerSn mgr = new ManagerSn("Sarah", 4000, 2000);
        //System.out.println(mgr.getName() + " Salary: " + mgr.getBaseSalary());
+//        EmployeeSn emp = new EmployeeSn("John", 3000);
+//        System.out.println(emp.getName() + " Salary: " + emp.getBaseSalary());
+//
+//        ManagerSn mgr = new ManagerSn("Sarah", 4000, 2000);
+//        System.out.println(mgr.getName() + " Salary: " + mgr.getBaseSalary());
+//
+//        DeveloperSn dev = new DeveloperSn("Alex", 3000, 3);
+//        System.out.println(dev.getName() + " Salary: " + dev.getBaseSalary());
+       //EmployeeSn emp = new EmployeeSn("John", 3000);
+       //System.out.println(emp.getName() + " Salary: " + emp.getBaseSalary());
+
+       //ManagerSn mgr = new ManagerSn("Sarah", 4000, 2000);
+       //System.out.println(mgr.getName() + " Salary: " + mgr.getBaseSalary());
 
        //DeveloperSn dev = new DeveloperSn("Alex", 3000, 3);
        //System.out.println(dev.getName() + " Salary: " + dev.getBaseSalary());
 
+        // Test SavingsAccount
+        SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
+        System.out.println("Savings Account Balance: " + savings.getBalance());
+        System.out.println("Interest: " + savings.calculateInterest());
+
+        // Test CurrentAccount
+        CurrentAccountSn current = new CurrentAccountSn("67890", 500, 200);
+        current.withdraw(600);
+        System.out.println("Current Account Balance: " + current.getBalance());
+        current.withdraw(200);
+        System.out.println("Current Account Balance after overdraft attempt: " + current.getBalance());
         // Test SavingsAccount
 //        SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
 //        System.out.println("Savings Account Balance: " + savings.getBalance());
