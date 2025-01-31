@@ -4,6 +4,9 @@ import javaPractice.ry.*;
 
 import java.util.Arrays;
 
+import javaPractice.sn.CurrentAccountSn;
+import javaPractice.sn.SavingAccountSn;
+
 public class PracticeMain {
 
 
@@ -83,14 +86,6 @@ public class PracticeMain {
         //System.out.println("cuboid.height= " + cuboidSn.getHeight());
         //System.out.println("cuboid.volume= " + cuboidSn.getVolume());
 
-//        EmployeeSn emp = new EmployeeSn("John", 3000);
-//        System.out.println(emp.getName() + " Salary: " + emp.getBaseSalary());
-//
-//        ManagerSn mgr = new ManagerSn("Sarah", 4000, 2000);
-//        System.out.println(mgr.getName() + " Salary: " + mgr.getBaseSalary());
-//
-//        DeveloperSn dev = new DeveloperSn("Alex", 3000, 3);
-//        System.out.println(dev.getName() + " Salary: " + dev.getBaseSalary());
        //EmployeeSn emp = new EmployeeSn("John", 3000);
        //System.out.println(emp.getName() + " Salary: " + emp.getBaseSalary());
 
@@ -124,6 +119,16 @@ public class PracticeMain {
 //        universityRY.addEmployee(new UniversityProfRY("Ramazan", 29, 125000, "Math"));
 //        System.out.println(universityRY.getTotalSalaries());
 
+//        AnimalRY lion = new LionRY("lion", 24);
+//        AnimalRY elephant = new ElephantRY("Elephant", 29);
+//        ZooRY zoo = new ZooRY();
+//        zoo.addAnimal(lion);
+//        zoo.addAnimal(elephant);
+//        System.out.println(zoo.animalSounds());
+//        UniversityRY universityRY = new UniversityRY();
+//        universityRY.addEmployee(new UniversityEmployeeRY("Ramazan", 39, 85000));
+//        universityRY.addEmployee(new UniversityProfRY("Ramazan", 29, 125000, "Math"));
+//        System.out.println(universityRY.getTotalSalaries());
 
 //        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
 //        System.out.println(Q26ToQ28AnswersRY.readInteger());
