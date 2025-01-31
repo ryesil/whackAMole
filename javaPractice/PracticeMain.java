@@ -7,6 +7,8 @@ import java.util.Arrays;
 import javaPractice.sn.CurrentAccountSn;
 import javaPractice.sn.SavingAccountSn;
 
+import java.util.Arrays;
+
 public class PracticeMain {
 
 
@@ -129,6 +131,11 @@ public class PracticeMain {
 //        universityRY.addEmployee(new UniversityEmployeeRY("Ramazan", 39, 85000));
 //        universityRY.addEmployee(new UniversityProfRY("Ramazan", 29, 125000, "Math"));
 //        System.out.println(universityRY.getTotalSalaries());
+
+//        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
+//        System.out.println(Q26ToQ28AnswersRY.readInteger());
+//          Q26ToQ28AnswersRY.findMin();
+        System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
 
 //        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
 //        System.out.println(Q26ToQ28AnswersRY.readInteger());
