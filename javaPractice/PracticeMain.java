@@ -1,5 +1,15 @@
 package javaPractice;
 
+import javaPractice.ry.*;
+import javaPractice.sn.*;
+
+import java.util.Arrays;
+
+import javaPractice.sn.CurrentAccountSn;
+import javaPractice.sn.SavingAccountSn;
+
+import java.util.Arrays;
+
 public class PracticeMain {
 
 
@@ -136,11 +146,45 @@ public class PracticeMain {
 //        universityRY.addEmployee(new UniversityProfRY("Ramazan", 29, 125000, "Math"));
 //        System.out.println(universityRY.getTotalSalaries());
 
+//        AnimalRY lion = new LionRY("lion", 24);
+//        AnimalRY elephant = new ElephantRY("Elephant", 29);
+//        ZooRY zoo = new ZooRY();
+//        zoo.addAnimal(lion);
+//        zoo.addAnimal(elephant);
+//        System.out.println(zoo.animalSounds());
+//        UniversityRY universityRY = new UniversityRY();
+//        universityRY.addEmployee(new UniversityEmployeeRY("Ramazan", 39, 85000));
+//        universityRY.addEmployee(new UniversityProfRY("Ramazan", 29, 125000, "Math"));
+//        System.out.println(universityRY.getTotalSalaries());
 
 //        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
 //        System.out.println(Q26ToQ28AnswersRY.readInteger());
 //          Q26ToQ28AnswersRY.findMin();
         System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
+
+//        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
+//        System.out.println(Q26ToQ28AnswersRY.readInteger());
+//          Q26ToQ28AnswersRY.findMin();
+      //System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
+
+      ////test animal
+      //ZooSn zooSn = new ZooSn();
+      //zooSn.addAnimal(new LionSn("Leo", 5));
+      //zooSn.addAnimal(new ElephantSn("Dumbo", 12));
+
+        //System.out.println("AnimalSn Sounds in the Zoo:");
+        //zooSn.getAnimalSounds();
+
+          /*Test University Personal*/
+        University university = new University();
+        university.addEmployee(new ProfessorSn("Dr. Smith", 45, 80000, "Computer Science"));
+        university.addEmployee(new AdminStaff("Alice", 35, 50000, "Finance"));
+
+        System.out.println("Total Salaries: $" + university.getTotalSalaries());
+
+
+
+
     }
 
 }
