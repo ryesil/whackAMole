@@ -34,7 +34,7 @@ public class Q26ToQ28Answers {
     }
 
 public static int  readInteger(int numberOfTimes){
-    System.out.println("Enter the an integer: "+ numberOfTimes);
+    System.out.println("Enter an integer: "+ numberOfTimes);
     Scanner in = new Scanner(System.in);
     int nextInt;
     try{

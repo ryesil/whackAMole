@@ -1,5 +1,10 @@
 package javaPractice;
 
+import javaPractice.ry.Q26ToQ28Answers;
+import javaPractice.ry.Q29To30Answers;
+
+import java.util.Arrays;
+
 public class PracticeMain {
 
 
@@ -140,7 +145,10 @@ public class PracticeMain {
 //        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
 //        System.out.println(Q26ToQ28AnswersRY.readInteger());
 //          Q26ToQ28AnswersRY.findMin();
-        System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
+       // System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
+        Q29To30Answers q29To30Answers = new Q29To30Answers();
+
+        q29To30Answers.groceryList();
     }
 
 }
