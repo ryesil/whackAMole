@@ -206,12 +206,24 @@ public class PracticeMain {
 
 
         /*Test Library */
-        LibrarySn librarySn = new LibrarySn();
-        librarySn.addItem(new BookSn("Java Programming", 1, "John Doe", 500));
-        librarySn.addItem(new MagazineSn("Tech Monthly", 2, 45, "TechCorp"));
+       //LibrarySn librarySn = new LibrarySn();
+       //librarySn.addItem(new BookSn("Java Programming", 1, "John Doe", 500));
+       //librarySn.addItem(new MagazineSn("Tech Monthly", 2, 45, "TechCorp"));
 
-        librarySn.listAllItems();
-        System.out.println("Item with ID 2: " + librarySn.findItemById(2));
+       //librarySn.listAllItems();
+       //System.out.println("Item with ID 2: " + librarySn.findItemById(2));
+
+
+        //Q25: Vehicle Rental System
+
+        RentalCarServiceSn rentalCarServiceSn = new RentalCarServiceSn();
+        rentalCarServiceSn.addVehicleSn(new CarSn("BMW", "X5", 100, true));
+        rentalCarServiceSn.addVehicleSn(new TruckSn("Volvo", "FH16", 200, 1500));
+
+        int[] daysArray = {3, 5};  // First vehicle rented for 3 days, second for 5 days.
+        System.out.println("Total Revenue: $" + rentalCarServiceSn.calculateTotalRevenue(daysArray));
+
+
 
 
 
