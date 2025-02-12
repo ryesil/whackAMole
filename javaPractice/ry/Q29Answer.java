@@ -3,7 +3,7 @@ package javaPractice.ry;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Q29To30Answers {
+public class Q29Answer {
     private List<String> list = new ArrayList<>();
 
 
@@ -79,7 +79,5 @@ public String toProperWord(String str) {
             return str.toUpperCase(Locale.ROOT);
         }
 }
-
-
 
 }

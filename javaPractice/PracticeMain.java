@@ -1,9 +1,11 @@
 package javaPractice;
 
-import javaPractice.ry.Q26ToQ28Answers;
-import javaPractice.ry.Q29To30Answers;
+import javaPractice.ry.Q29Answer;
+import javaPractice.ry.Question30.ContactRY;
+import javaPractice.ry.Question30.MobilePhoneRY;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PracticeMain {
 
@@ -107,16 +109,16 @@ public class PracticeMain {
        //System.out.println(dev.getName() + " Salary: " + dev.getBaseSalary());
 
         // Test SavingsAccount
-        SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
-        System.out.println("Savings Account Balance: " + savings.getBalance());
-        System.out.println("Interest: " + savings.calculateInterest());
+//        SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
+//        System.out.println("Savings Account Balance: " + savings.getBalance());
+//        System.out.println("Interest: " + savings.calculateInterest());
 
         // Test CurrentAccount
-        CurrentAccountSn current = new CurrentAccountSn("67890", 500, 200);
-        current.withdraw(600);
-        System.out.println("Current Account Balance: " + current.getBalance());
-        current.withdraw(200);
-        System.out.println("Current Account Balance after overdraft attempt: " + current.getBalance());
+//        CurrentAccountSn current = new CurrentAccountSn("67890", 500, 200);
+//        current.withdraw(600);
+//        System.out.println("Current Account Balance: " + current.getBalance());
+//        current.withdraw(200);
+//        System.out.println("Current Account Balance after overdraft attempt: " + current.getBalance());
         // Test SavingsAccount
 //        SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
 //        System.out.println("Savings Account Balance: " + savings.getBalance());
@@ -146,9 +148,23 @@ public class PracticeMain {
 //        System.out.println(Q26ToQ28AnswersRY.readInteger());
 //          Q26ToQ28AnswersRY.findMin();
        // System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
-        Q29To30Answers q29To30Answers = new Q29To30Answers();
+//        Q29Answer q29Answer = new Q29Answer();
+//
+//        q29Answer.groceryList();
 
-        q29To30Answers.groceryList();
+        MobilePhoneRY mobilePhoneRY = new MobilePhoneRY("414141414");
+
+        mobilePhoneRY.addNewContact(new ContactRY("Bob", "31415926"));
+        mobilePhoneRY.addNewContact(new ContactRY("Alice", "16180339"));
+        mobilePhoneRY.addNewContact(new ContactRY("Tom", "11235813"));
+        mobilePhoneRY.addNewContact(new ContactRY("Jane", "23571113"));
+        mobilePhoneRY.printContacts();
+//        mobilePhoneRY.updateContact(new ContactRY("Bob", "31415926"), new ContactRY("Bob", "11111111"));
+//        mobilePhoneRY.printContacts();
+//        mobilePhoneRY.removeContact(new ContactRY("Bob", "11111111"));
+//        mobilePhoneRY.printContacts();
+//        System.out.println(mobilePhoneRY.findContact("Alice"));
+        System.out.println(mobilePhoneRY.queryContact("Bobe").toString());
     }
 
 }
