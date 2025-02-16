@@ -7,6 +7,30 @@ import javaPractice.ry.Question30.MobilePhoneRY;
 import java.util.ArrayList;
 import java.util.List;
 
+import javaPractice.ry.*;
+
+import java.util.Arrays;
+
+import javaPractice.sn.CurrentAccountSn;
+import javaPractice.sn.SavingAccountSn;
+
+import java.util.Arrays;
+
+import javaPractice.ry.Q26ToQ28Answers;
+import javaPractice.ry.Q29To30Answers;
+
+import java.util.Arrays;
+
+import javaPractice.ry.*;
+import javaPractice.sn.*;
+
+import java.util.Arrays;
+
+import javaPractice.sn.CurrentAccountSn;
+import javaPractice.sn.SavingAccountSn;
+
+import java.util.Arrays;
+
 public class PracticeMain {
 
 
@@ -112,6 +136,9 @@ public class PracticeMain {
 //        SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
 //        System.out.println("Savings Account Balance: " + savings.getBalance());
 //        System.out.println("Interest: " + savings.calculateInterest());
+      // SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
+      // System.out.println("Savings Account Balance: " + savings.getBalance());
+      // System.out.println("Interest: " + savings.calculateInterest());
 
         // Test CurrentAccount
 //        CurrentAccountSn current = new CurrentAccountSn("67890", 500, 200);
@@ -119,6 +146,11 @@ public class PracticeMain {
 //        System.out.println("Current Account Balance: " + current.getBalance());
 //        current.withdraw(200);
 //        System.out.println("Current Account Balance after overdraft attempt: " + current.getBalance());
+      // CurrentAccountSn current = new CurrentAccountSn("67890", 500, 200);
+      // current.withdraw(600);
+      // System.out.println("Current Account Balance: " + current.getBalance());
+      // current.withdraw(200);
+      // System.out.println("Current Account Balance after overdraft attempt: " + current.getBalance());
         // Test SavingsAccount
 //        SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
 //        System.out.println("Savings Account Balance: " + savings.getBalance());
@@ -143,6 +175,21 @@ public class PracticeMain {
 //        universityRY.addEmployee(new UniversityProfRY("Ramazan", 29, 125000, "Math"));
 //        System.out.println(universityRY.getTotalSalaries());
 
+//        AnimalRY lion = new LionRY("lion", 24);
+//        AnimalRY elephant = new ElephantRY("Elephant", 29);
+//        ZooRY zoo = new ZooRY();
+//        zoo.addAnimal(lion);
+//        zoo.addAnimal(elephant);
+//        System.out.println(zoo.animalSounds());
+//        UniversityRY universityRY = new UniversityRY();
+//        universityRY.addEmployee(new UniversityEmployeeRY("Ramazan", 39, 85000));
+//        universityRY.addEmployee(new UniversityProfRY("Ramazan", 29, 125000, "Math"));
+//        System.out.println(universityRY.getTotalSalaries());
+
+//        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
+//        System.out.println(Q26ToQ28AnswersRY.readInteger());
+//          Q26ToQ28AnswersRY.findMin();
+        //System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
 
 //        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
 //        System.out.println(Q26ToQ28AnswersRY.readInteger());
@@ -165,6 +212,54 @@ public class PracticeMain {
 //        mobilePhoneRY.printContacts();
 //        System.out.println(mobilePhoneRY.findContact("Alice"));
         System.out.println(mobilePhoneRY.queryContact("Bobe").toString());
+       // System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
+        //Q29To30Answers q29To30Answers = new Q29To30Answers();
+
+      //  q29To30Answers.groceryList();
+
+//        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
+//        System.out.println(Q26ToQ28AnswersRY.readInteger());
+//          Q26ToQ28AnswersRY.findMin();
+      //System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
+
+      ////test animal
+      //ZooSn zooSn = new ZooSn();
+      //zooSn.addAnimal(new LionSn("Leo", 5));
+      //zooSn.addAnimal(new ElephantSn("Dumbo", 12));
+
+        //System.out.println("AnimalSn Sounds in the Zoo:");
+        //zooSn.getAnimalSounds();
+
+          /*Test University Personal*/
+        //University university = new University();
+        //university.addEmployee(new ProfessorSn("Dr. Smith", 45, 80000, "Computer Science"));
+        //university.addEmployee(new AdminStaff("Alice", 35, 50000, "Finance"));
+//
+        //System.out.println("Total Salaries: $" + university.getTotalSalaries());
+
+
+        /*Test Library */
+       //LibrarySn librarySn = new LibrarySn();
+       //librarySn.addItem(new BookSn("Java Programming", 1, "John Doe", 500));
+       //librarySn.addItem(new MagazineSn("Tech Monthly", 2, 45, "TechCorp"));
+
+       //librarySn.listAllItems();
+       //System.out.println("Item with ID 2: " + librarySn.findItemById(2));
+
+
+        //Q25: Vehicle Rental System
+
+        RentalCarServiceSn rentalCarServiceSn = new RentalCarServiceSn();
+        rentalCarServiceSn.addVehicleSn(new CarSn("BMW", "X5", 100, true));
+        rentalCarServiceSn.addVehicleSn(new TruckSn("Volvo", "FH16", 200, 1500));
+
+        int[] daysArray = {3, 5};  // First vehicle rented for 3 days, second for 5 days.
+        System.out.println("Total Revenue: $" + rentalCarServiceSn.calculateTotalRevenue(daysArray));
+
+
+
+
+
     }
 
 }
