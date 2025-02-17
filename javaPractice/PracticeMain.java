@@ -24,6 +24,8 @@ import javaPractice.sn.SavingAccountSn;
 
 import java.util.Arrays;
 
+import static javaPractice.sn.Q26ToQ30Answers.*;
+
 public class PracticeMain {
 
 
@@ -126,16 +128,16 @@ public class PracticeMain {
        //System.out.println(dev.getName() + " Salary: " + dev.getBaseSalary());
 
         // Test SavingsAccount
-        SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
-        System.out.println("Savings Account Balance: " + savings.getBalance());
-        System.out.println("Interest: " + savings.calculateInterest());
-
-        // Test CurrentAccount
-        CurrentAccountSn current = new CurrentAccountSn("67890", 500, 200);
-        current.withdraw(600);
-        System.out.println("Current Account Balance: " + current.getBalance());
-        current.withdraw(200);
-        System.out.println("Current Account Balance after overdraft attempt: " + current.getBalance());
+       // SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
+       // System.out.println("Savings Account Balance: " + savings.getBalance());
+       // System.out.println("Interest: " + savings.calculateInterest());
+//
+       // // Test CurrentAccount
+       // CurrentAccountSn current = new CurrentAccountSn("67890", 500, 200);
+       // current.withdraw(600);
+       // System.out.println("Current Account Balance: " + current.getBalance());
+       // current.withdraw(200);
+       // System.out.println("Current Account Balance after overdraft attempt: " + current.getBalance());
         // Test SavingsAccount
 //        SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
 //        System.out.println("Savings Account Balance: " + savings.getBalance());
@@ -174,15 +176,15 @@ public class PracticeMain {
 //        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
 //        System.out.println(Q26ToQ28AnswersRY.readInteger());
 //          Q26ToQ28AnswersRY.findMin();
-        System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
+        //System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
 
 //        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
 //        System.out.println(Q26ToQ28AnswersRY.readInteger());
 //          Q26ToQ28AnswersRY.findMin();
        // System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
-        Q29To30Answers q29To30Answers = new Q29To30Answers();
-
-        q29To30Answers.groceryList();
+        //Q29To30Answers q29To30Answers = new Q29To30Answers();
+//
+        //q29To30Answers.groceryList();
 
 //        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
 //        System.out.println(Q26ToQ28AnswersRY.readInteger());
@@ -198,11 +200,25 @@ public class PracticeMain {
         //zooSn.getAnimalSounds();
 
           /*Test University Personal*/
-        University university = new University();
-        university.addEmployee(new ProfessorSn("Dr. Smith", 45, 80000, "Computer Science"));
-        university.addEmployee(new AdminStaff("Alice", 35, 50000, "Finance"));
+       //University university = new University();
+       //university.addEmployee(new ProfessorSn("Dr. Smith", 45, 80000, "Computer Science"));
+       //university.addEmployee(new AdminStaff("Alice", 35, 50000, "Finance"));
 
-        System.out.println("Total Salaries: $" + university.getTotalSalaries());
+       //System.out.println("Total Salaries: $" + university.getTotalSalaries());
+
+
+        /* 26 - Test Sorted Array */
+
+        //int[] myIntegers =getIntegersSn(5); // Get user input for an array of size 5
+        //int[] sorted = sortIntegersSn(myIntegers); // Sort the array in descending order
+        //printArraySn(sorted); // Print the sorted array
+
+        /* 27 - Test Minimum Element*/
+
+        int num = readIntegerSn();
+        int[] arr = readElementsSn(num);
+        System.out.println("Min element of array : "+findMinSn(arr));
+
 
 
 
