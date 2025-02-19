@@ -209,15 +209,25 @@ public class PracticeMain {
 
         /* 26 - Test Sorted Array */
 
-        //int[] myIntegers =getIntegersSn(5); // Get user input for an array of size 5
-        //int[] sorted = sortIntegersSn(myIntegers); // Sort the array in descending order
-        //printArraySn(sorted); // Print the sorted array
+    //int[] myIntegers =getIntegersSn(5); // Get user input for an array of size 5
+    //int[] sorted = sortIntegersSn(myIntegers); // Sort the array in descending order
+
+    //int[] sort2 = sortIntegersWithoutLambdaSn(myIntegers);
+    //int[] sort3 = sortedIntegersWithoutStreamSn(myIntegers);
+
+
+    //System.out.println("Sorted array with lambda : ");
+    //printArraySn(sorted); // Print the sorted array
+    //System.out.println("Sorted array without lambda : ");
+    //printArraySn(sort2);
+    //System.out.println("Sorted array without stream : ");
+    //printArraySn(sort3);
 
         /* 27 - Test Minimum Element*/
 
-        int num = readIntegerSn();
-        int[] arr = readElementsSn(num);
-        System.out.println("Min element of array : "+findMinSn(arr));
+       int num = readIntegerSn();
+       int[] arr = readElementsSn(num);
+       System.out.println("Min element of array : "+findMinSn(arr));
 
 
 

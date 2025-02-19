@@ -45,7 +45,7 @@ public class Q26ToQ30Answers {
         }
     }
 
-    //sort
+    //sort - 1. yol
     public static int[] sortIntegersSn(int[] array) {
         return Arrays.stream(array)
                 .boxed()  // Convert int[] to Integer[]
@@ -53,6 +53,39 @@ public class Q26ToQ30Answers {
                 .mapToInt(Integer::intValue) // Convert back to int[]
                 .toArray();
     }
+
+    //sort - 2.yol
+    public static int[] sortedIntegersWithoutStreamSn(int[] arr) {
+        Integer[] box = new Integer[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            box[i] = arr[i];
+        }
+        Arrays.sort(box, Collections.reverseOrder());
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = box[i];
+
+        }
+        return arr;
+    }
+
+    //sort - 3.yol
+    public static int[] sortIntegersWithoutLambdaSn(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] < arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+
+
+
+
 
    /*
     Q27
@@ -73,32 +106,46 @@ public class Q26ToQ30Answers {
 
     public static int readIntegerSn() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter the number of elements : ");
-        return scanner.nextInt();
+        int number;
+        while (true) {
+            System.out.println("Please enter the number of elements: ");
+            if (scanner.hasNextInt()) {
+                number = scanner.nextInt();
+                break;
+            } else {
+                System.out.println("Invalid input! Please enter a valid integer.");
+                scanner.next();
+            }
+        }
+        return number;
     }
 
     public static int[] readElementsSn(int num) {
         Scanner scanner = new Scanner(System.in);
         int[] arr = new int[num];
 
-        System.out.println("Please enter " + num + " elements");
+        System.out.println("Please enter " + num + " elements:");
         for (int i = 0; i < num; i++) {
-            arr[i] = scanner.nextInt();
+            while (true) {
+                if (scanner.hasNextInt()) {
+                    arr[i] = scanner.nextInt();
+                    break;
+                } else {
+                    System.out.println("Invalid input! Please enter an integer.");
+                    scanner.next();
+                }
+            }
         }
         return arr;
     }
 
     public static int findMinSn(int[] arr) {
-
         int min = arr[0];
-
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) { // i=1'den başlamalı
             if (arr[i] < min) {
                 min = arr[i];
             }
         }
         return min;
     }
-
-
 }
