@@ -602,36 +602,117 @@ Q29
  Q30
  Mobile Phone
 Create a program that implements a simple mobile phone with the following capabilities.
-1.  Implement the master class MobilePhone, that holds the ArrayList of Contacts, with the following attributes:
-    -  Two fields, a String called myNumber and an ArrayList of type Contact called myContacts.
+1.  Implement the master class MobilePhoneRY, that holds the ArrayList of ContactRY, with the following attributes:
+    -  Two fields, a String called myNumber and an ArrayList of type ContactRY called myContacts.
     -  A constructor that takes a String (the phone number) and initialises myNumber and instantiates myContacts.
     -  And seven methods, they are (their functions are in their names):
-        -  addNewContact(), has one parameter of type Contact and returns a boolean. Returns true if the contact doesn't exists, or false if the contact already exists.
-        -  updateContact(), has two parameters of type Contact (the old contact that will be updated with the new contact) and returns a boolean. Returns true if the contact exists and was updated successfully, or false if the contact doesn't exists.
-        -  removeContact(), has one parameter of type Contact and returns a boolean. Returns true if the contact exists and was removed successfully, or false if the contact doesn't exists.
-        -  findContact(), has one parameter of type Contact and returns an int. The returned value is it's position in the ArrayList, it will either be -1 (doesn't exists) or a value greater than or equal to 0 (does exists).
+        -  addNewContact(), has one parameter of type ContactRY and returns a boolean. Returns true if the contact doesn't exists, or false if the contact already exists.
+        -  updateContact(), has two parameters of type ContactRY (the old contact that will be updated with the new contact) and returns a boolean. Returns true if the contact exists and was updated successfully, or false if the contact doesn't exists.
+        -  removeContact(), has one parameter of type ContactRY and returns a boolean. Returns true if the contact exists and was removed successfully, or false if the contact doesn't exists.
+        -  findContact(), has one parameter of type ContactRY and returns an int. The returned value is it's position in the ArrayList, it will either be -1 (doesn't exists) or a value greater than or equal to 0 (does exists).
         -  findContact(), same as above, only it has one parameter of type String.
-        -  queryContact(), has one parameter of type String and returns a Contact. Use the String to search for the name and then return the Contact. Return null otherwise.
+        -  queryContact(), has one parameter of type String and returns a ContactRY. Use the String to search for the name and then return the ContactRY. Return null otherwise.
         -  printContacts(), has no parameters and doesn't return anything. Print the contacts in the following format:
-Contact List:
+ContactRY List:
 1. Bob -> 31415926
 2. Alice -> 16180339
 3. Tom -> 11235813
 4. Jane -> 23571113
-2. Implement the Contact class with the following attributes:
+2. Implement the ContactRY class with the following attributes:
     -  Two fields, both String, one called name and the other phoneNumber.
     -  A constructor that takes two Strings, and initialises name and phoneNumber.
     -  And Three methods, they are:
         -  getName(), getter for name.
         -  getPhoneNumber(), getter for phoneNumber.
-        -  createContact(), has two parameters of type String (the persons name and phone number) and returns an instance of Contact. This is the only method that is static.
-TIP:  In MobilePhone, use findContact() in the other methods (except printContacts()) to check if it exists before proceeding.
-TIP:  Two Contact objects are equal if they have the same name.
+        -  createContact(), has two parameters of type String (the persons name and phone number) and returns an instance of ContactRY. This is the only method that is static.
+TIP:  In MobilePhoneRY, use findContact() in the other methods (except printContacts()) to check if it exists before proceeding.
+TIP:  Two ContactRY objects are equal if they have the same name.
 TIP:  Be extremely careful about spaces in the printed message.
 NOTE:  All fields are private.
 NOTE:  Constructors should be defined as public.
 NOTE:  All methods should be defined as public (except for the two findContact() methods which are private).
   */
+
+/*
+    LinkList
+    Q31
+    Playlist
+Create a program that implements a playlist of songs.
+To start you off, implement the following classes:
+1.  Album
+    -  It has three fields, two Strings called name and artist, and an ArrayList that holds objects of type Song called songs.
+    -  A constructor that accepts two Strings (name of the album and artist). It initialises the fields and instantiates songs.
+    -  And three methods, they are:
+        -  addSong(), has two parameters of type String (title of song), double (duration of song) and returns a boolean. Returns true if the song was added successfully or false otherwise.
+        -  findSong(), has one parameter of type String (title of song) and returns a Song. Returns the Song if it exists, null if it doesn't exists.
+        -  addToPlayList(), has two parameters of type int (track number of song in album) and LinkedList (the playlist) that holds objects of type Song, and returns a boolean. Returns true if it exists and it was added successfully using the track number, or false otherwise.
+        -  addToPlayList(), has two parameters of type String (title of song) and LinkedList (the playlist) that holds objects of type Song, and returns a boolean. Returns true if it exists and it was added successfully using the name of the song, or false otherwise.
+2.  Song
+    -   It has two fields, a String called title and a double called duration.
+    -  A constructor that accepts a String (title of the song) and a double (duration of the song). It initialises title and duration.
+    -  And two methods, they are:
+        -  getTitle(), getter for title.
+        -  toString(), Songs overriding toString method. Returns a String in the following format: "title: duration"
+->  SAMPLE INPUT
+ArrayList<Album> albums = new ArrayList<>();
+Album album = new Album("Stormbringer", "Deep Purple");
+album.addSong("Stormbringer", 4.6);
+album.addSong("Love don't mean a thing", 4.22);
+album.addSong("Holy man", 4.3);
+album.addSong("Hold on", 5.6);
+album.addSong("Lady double dealer", 3.21);
+album.addSong("You can't do it right", 6.23);
+album.addSong("High ball shooter", 4.27);
+album.addSong("The gypsy", 4.2);
+album.addSong("Soldier of fortune", 3.13);
+albums.add(album);
+album = new Album("For those about to rock", "AC/DC");
+album.addSong("For those about to rock", 5.44);
+album.addSong("I put the finger on you", 3.25);
+album.addSong("Lets go", 3.45);
+album.addSong("Inject the venom", 3.33);
+album.addSong("Snowballed", 4.51);
+album.addSong("Evil walks", 3.45);
+album.addSong("C.O.D.", 5.25);
+album.addSong("Breaking the rules", 5.32);
+album.addSong("Night of the long knives", 5.12);
+albums.add(album);
+LinkedList<Song> playList = new LinkedList<Song>();
+albums.get(0).addToPlayList("You can't do it right", playList);
+albums.get(0).addToPlayList("Holy man", playList);
+albums.get(0).addToPlayList("Speed king", playList);  // Does not exist
+albums.get(0).addToPlayList(9, playList);
+albums.get(1).addToPlayList(3, playList);
+albums.get(1).addToPlayList(2, playList);
+albums.get(1).addToPlayList(24, playList);  // There is no track 24
+TIP:  In Album, use the findSong() method in addSong() and addToPlayList(String, LinkedList) to check if a song exists before proceeding.
+TIP:  Be extremely careful with the spelling of the names of the fields, constructors and methods.
+TIP:  Be extremely careful about spaces and spelling in the returned String from the toString() method.
+NOTE:  All fields are private.
+NOTE:  All constructors are public.
+NOTE:  All methods are public (except for findSong() which is private).
+ */
+
+/*
+    Q32
+    AutoBoxing and Unboxing
+    Okay, so it's time for a challenge on autoboxing and unboxing.
+In this challenge, you'll need to create a simple banking application with a Customer and Bank type.
+The Customer will have a name and an ArrayList of transactions containing Double wrapper elements.
+A customer's transaction can be a credit, which means a positive amount, or it can be
+a debit, a negative amount. The Bank will have a name,
+and an ArrayList of customers. The bank should add a new customer,
+if they're not yet already in the list. The bank class should allow a customer to add a
+transaction, to an existing Customer. This class should also print a statement, that
+includes the customer name, and the transaction amounts. This method should use unboxing.
+Hopefully that's fairly clear but also gives you a little room to be creative.
+Alright, so it's your turn to see if you can complete the challenge.
+Remember don't overcomplicate things, you should aim to keep it pretty basic.
+The customer's literally only the name and the transactions at this stage.
+You don't need to store customer contract addresses or anything like that.
+The main thing is the relationship between the various classes and also
+the auto boxing and unboxing.
+ */
 
 
 
