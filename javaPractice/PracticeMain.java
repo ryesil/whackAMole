@@ -1,12 +1,5 @@
 package javaPractice;
 
-import javaPractice.ry.Q29Answer;
-import javaPractice.ry.Question30.ContactRY;
-import javaPractice.ry.Question30.MobilePhoneRY;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import javaPractice.ry.*;
 
 import java.util.Arrays;
@@ -30,6 +23,8 @@ import javaPractice.sn.CurrentAccountSn;
 import javaPractice.sn.SavingAccountSn;
 
 import java.util.Arrays;
+
+import static javaPractice.sn.Q26ToQ30Answers.*;
 
 public class PracticeMain {
 
@@ -133,19 +128,21 @@ public class PracticeMain {
        //System.out.println(dev.getName() + " Salary: " + dev.getBaseSalary());
 
         // Test SavingsAccount
-//        SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
-//        System.out.println("Savings Account Balance: " + savings.getBalance());
-//        System.out.println("Interest: " + savings.calculateInterest());
+       // SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
+       // System.out.println("Savings Account Balance: " + savings.getBalance());
+       // System.out.println("Interest: " + savings.calculateInterest());
+//
+       // // Test CurrentAccount
+       // CurrentAccountSn current = new CurrentAccountSn("67890", 500, 200);
+       // current.withdraw(600);
+       // System.out.println("Current Account Balance: " + current.getBalance());
+       // current.withdraw(200);
+       // System.out.println("Current Account Balance after overdraft attempt: " + current.getBalance());
       // SavingAccountSn savings = new SavingAccountSn("12345", 1000, 0.05);
       // System.out.println("Savings Account Balance: " + savings.getBalance());
       // System.out.println("Interest: " + savings.calculateInterest());
 
         // Test CurrentAccount
-//        CurrentAccountSn current = new CurrentAccountSn("67890", 500, 200);
-//        current.withdraw(600);
-//        System.out.println("Current Account Balance: " + current.getBalance());
-//        current.withdraw(200);
-//        System.out.println("Current Account Balance after overdraft attempt: " + current.getBalance());
       // CurrentAccountSn current = new CurrentAccountSn("67890", 500, 200);
       // current.withdraw(600);
       // System.out.println("Current Account Balance: " + current.getBalance());
@@ -195,23 +192,14 @@ public class PracticeMain {
 //        System.out.println(Q26ToQ28AnswersRY.readInteger());
 //          Q26ToQ28AnswersRY.findMin();
        // System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
-//        Q29Answer q29Answer = new Q29Answer();
+        //Q29To30Answers q29To30Answers = new Q29To30Answers();
 //
-//        q29Answer.groceryList();
+        //q29To30Answers.groceryList();
+        //System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
 
-        MobilePhoneRY mobilePhoneRY = new MobilePhoneRY("414141414");
-
-        mobilePhoneRY.addNewContact(new ContactRY("Bob", "31415926"));
-        mobilePhoneRY.addNewContact(new ContactRY("Alice", "16180339"));
-        mobilePhoneRY.addNewContact(new ContactRY("Tom", "11235813"));
-        mobilePhoneRY.addNewContact(new ContactRY("Jane", "23571113"));
-        mobilePhoneRY.printContacts();
-//        mobilePhoneRY.updateContact(new ContactRY("Bob", "31415926"), new ContactRY("Bob", "11111111"));
-//        mobilePhoneRY.printContacts();
-//        mobilePhoneRY.removeContact(new ContactRY("Bob", "11111111"));
-//        mobilePhoneRY.printContacts();
-//        System.out.println(mobilePhoneRY.findContact("Alice"));
-        System.out.println(mobilePhoneRY.queryContact("Bobe").toString());
+//        System.out.println(Arrays.toString(Q26ToQ28AnswersRY.orderIntegers1(new int[] {14,3,2,1,12})));
+//        System.out.println(Q26ToQ28AnswersRY.readInteger());
+//          Q26ToQ28AnswersRY.findMin();
        // System.out.println(Arrays.toString(new Q26ToQ28Answers().reversedArr2(new int[]{1,2,3,4, -1})));
         //Q29To30Answers q29To30Answers = new Q29To30Answers();
 
@@ -231,6 +219,11 @@ public class PracticeMain {
         //zooSn.getAnimalSounds();
 
           /*Test University Personal*/
+       //University university = new University();
+       //university.addEmployee(new ProfessorSn("Dr. Smith", 45, 80000, "Computer Science"));
+       //university.addEmployee(new AdminStaff("Alice", 35, 50000, "Finance"));
+
+       //System.out.println("Total Salaries: $" + university.getTotalSalaries());
         //University university = new University();
         //university.addEmployee(new ProfessorSn("Dr. Smith", 45, 80000, "Computer Science"));
         //university.addEmployee(new AdminStaff("Alice", 35, 50000, "Finance"));
@@ -245,6 +238,29 @@ public class PracticeMain {
 
        //librarySn.listAllItems();
        //System.out.println("Item with ID 2: " + librarySn.findItemById(2));
+
+
+        /* 26 - Test Sorted Array */
+
+    //int[] myIntegers =getIntegersSn(5); // Get user input for an array of size 5
+    //int[] sorted = sortIntegersSn(myIntegers); // Sort the array in descending order
+
+    //int[] sort2 = sortIntegersWithoutLambdaSn(myIntegers);
+    //int[] sort3 = sortedIntegersWithoutStreamSn(myIntegers);
+
+
+    //System.out.println("Sorted array with lambda : ");
+    //printArraySn(sorted); // Print the sorted array
+    //System.out.println("Sorted array without lambda : ");
+    //printArraySn(sort2);
+    //System.out.println("Sorted array without stream : ");
+    //printArraySn(sort3);
+
+        /* 27 - Test Minimum Element*/
+
+       int num = readIntegerSn();
+       int[] arr = readElementsSn(num);
+       System.out.println("Min element of array : "+findMinSn(arr));
 
 
         //Q25: Vehicle Rental System
