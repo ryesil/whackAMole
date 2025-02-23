@@ -640,14 +640,14 @@ NOTE:  All methods should be defined as public (except for the two findContact()
 Create a program that implements a playlist of songs.
 To start you off, implement the following classes:
 1.  Album
-    -  It has three fields, two Strings called name and artist, and an ArrayList that holds objects of type Song called songs.
+    -  It has three fields, two Strings called name and artist, and an ArrayList that holds objects of type SongRY called songs.
     -  A constructor that accepts two Strings (name of the album and artist). It initialises the fields and instantiates songs.
     -  And three methods, they are:
         -  addSong(), has two parameters of type String (title of song), double (duration of song) and returns a boolean. Returns true if the song was added successfully or false otherwise.
-        -  findSong(), has one parameter of type String (title of song) and returns a Song. Returns the Song if it exists, null if it doesn't exists.
-        -  addToPlayList(), has two parameters of type int (track number of song in album) and LinkedList (the playlist) that holds objects of type Song, and returns a boolean. Returns true if it exists and it was added successfully using the track number, or false otherwise.
-        -  addToPlayList(), has two parameters of type String (title of song) and LinkedList (the playlist) that holds objects of type Song, and returns a boolean. Returns true if it exists and it was added successfully using the name of the song, or false otherwise.
-2.  Song
+        -  findSong(), has one parameter of type String (title of song) and returns a SongRY. Returns the SongRY if it exists, null if it doesn't exists.
+        -  addToPlayList(), has two parameters of type int (track number of song in album) and LinkedList (the playlist) that holds objects of type SongRY, and returns a boolean. Returns true if it exists and it was added successfully using the track number, or false otherwise.
+        -  addToPlayList(), has two parameters of type String (title of song) and LinkedList (the playlist) that holds objects of type SongRY, and returns a boolean. Returns true if it exists and it was added successfully using the name of the song, or false otherwise.
+2.  SongRY
     -   It has two fields, a String called title and a double called duration.
     -  A constructor that accepts a String (title of the song) and a double (duration of the song). It initialises title and duration.
     -  And two methods, they are:
@@ -677,7 +677,7 @@ album.addSong("C.O.D.", 5.25);
 album.addSong("Breaking the rules", 5.32);
 album.addSong("Night of the long knives", 5.12);
 albums.add(album);
-LinkedList<Song> playList = new LinkedList<Song>();
+LinkedList<SongRY> playList = new LinkedList<SongRY>();
 albums.get(0).addToPlayList("You can't do it right", playList);
 albums.get(0).addToPlayList("Holy man", playList);
 albums.get(0).addToPlayList("Speed king", playList);  // Does not exist
